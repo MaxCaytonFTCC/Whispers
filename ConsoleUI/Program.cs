@@ -1,8 +1,8 @@
 ﻿/**
 * 5/5/2023
 * CSC 153
-* Max Cayton
-* This program plays the game World of Villainy.
+* Group 3
+* This program plays the game Whispers
 */
 
 using System;
