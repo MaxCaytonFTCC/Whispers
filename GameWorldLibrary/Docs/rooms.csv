@@ -1,0 +1,6 @@
+ID,Name,Description,Exits,Items,Mobs,Weapons,Treasures,Potions
+0,Cave of Awakening,A dark damp cavern with a small pool of murky water.,1_2,3,-1,-1,-1,-1
+1,Chasm of Warpaths,A long ominous tunnel that leads into other tunnels that are marked with emblems.,4_0_3,2,-1,0_1_2_3,2,-1
+2,Armory,A warm cavern that echoes the clanking of anvils.,0,0_1,-1,-1,-1,-1
+3,Marrowbrew Co. Brewing Tent,A dark green and purple-striped tent with two amiable skeletons inside.,1,-1,-1,-1,-1,0_1
+4,The "Proving Pit",A deep pit where new recruits prove themselves in combat.,1,-1,0_1_2_3_4,-1,-1,-1

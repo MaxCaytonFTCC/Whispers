@@ -1,0 +1,6 @@
+ID,Name,Race,Class,HP,AC,Weapon,Description,Treasures
+0,Overconfident Sword-Swinger,Demon,Warrior,15,10,0,An arrogant fool who thinks they're invincible.,2
+1,Necrotic Understudy,Undead,Necromancer,15,10,1,A skeleton who should've paid more attention in class.,2
+2,Crazed Knife Juggler,Mechanical,Assassin,15,10,2,Someone who likes knives way too much.,0
+3,Angry Campfire,Elemental,Firelord,15,10,3,An elemental who feels insulted when used to make smores.,1
+4,Commander Funbane,Undead,Warrior,100,-20,4,He who breaks those who aren't worthy of Villainhood.,-1

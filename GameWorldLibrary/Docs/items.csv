@@ -1,0 +1,5 @@
+ID,Name,Price,Quest Item,Required,Description
+0,Armor Pack,1,TRUE,TRUE,An armor pack for new recruits provided by the Armory
+1,Marrowbrew Co. Business Card,1,TRUE,TRUE,The card reads: "Visit a Marrowbrew Co. Brewing Tent near you for potions that will rattle your bones!"
+2,Less-Than-Stellar War Rations,1,FALSE,FALSE,Mediocre food meant for keeping recruits who need to eat alive.
+3,Warp Gem,0,FALSE,FALSE,A priceless enchanted gem that is capable of teleportation.

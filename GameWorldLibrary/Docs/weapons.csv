@@ -1,0 +1,6 @@
+ID,Name,Description,Damage Type,Price,Damage
+0,Initiate's Waraxe,"A heavy battle-worn double-bladed axe.",Slashing,1,5
+1,Novice's Bone Splinter,"A skeleton's disembodied index finger imbued with magic and usable as a wand.",Necrotic,1,5
+2,Thief's Rusty Knives,A set of knives that have seen better days.,Piercing,1,5
+3,Flameseer's Flickering Wartorch,"An ancient weapon of elemental lords bereft of all but a spark.",Fire,1,5
+4,Obsidian Glaive,A brutal weapon fit for a warlord with a volcanic temper.,Slashing,100,30
