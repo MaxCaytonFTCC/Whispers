@@ -13,7 +13,7 @@ namespace GameWorldLibrary
             // Loop
             while (true)
             {
-                // Try to get an integer
+                // Catch input that is not an int
                 try
                 {
                     // Prompt user
@@ -26,7 +26,7 @@ namespace GameWorldLibrary
                 // Player enters incorrectly
                 catch (Exception e)
                 {
-                    // Show error message
+                    // Print error message
                     Console.WriteLine(e.Message);
                 }
             }
@@ -34,11 +34,42 @@ namespace GameWorldLibrary
 
         public static string[] Tokens()
         {
+            // Loop?
+            // In case command token (tokens[0]) does not match any known command keyword
+            // Maybe should not have removed Convert class
             // Prompt user
             Console.Write("Enter a command: ");
 
             // Return string input
             return Console.ReadLine().ToLower().Split(' ');
+        }
+
+        public static string StrArray(string[] array)
+        { 
+            /* Input for String Array
+             * ======================
+             * Designed to return a choice from an array of string options
+             */
+
+            // Catch input that is not a valid index
+            try
+            {
+                // Prompt user
+                for (int i = 0; i < array.Length; i++)
+                {
+                    // Print options and index + 1
+                    Console.WriteLine($"{i + 1}. {array[i]}");
+                }
+                // Get index input from user
+
+            }
+            // Player enters incorrectly
+            catch (Exception e)
+            {
+                // Print error message
+                Console.WriteLine(e.Message);
+            }
+            return "";  // DEBUG
         }
     }
 }

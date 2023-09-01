@@ -10,7 +10,7 @@ namespace GameWorldLibrary
     {
         public static void Battle(Player player, Mob mob)
         {
-
+            /*
             // Get the player's weapon of choice
             DisplayRequested.DisplayWeaponInstructions();
             Weapon playerWeapon = Player.SelectWeapon(player);
@@ -81,6 +81,7 @@ namespace GameWorldLibrary
             }
             
             Console.WriteLine("----COMBAT ENDS----\n");
+            */
         }
     }
 }

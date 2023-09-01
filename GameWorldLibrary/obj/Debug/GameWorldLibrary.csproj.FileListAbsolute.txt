@@ -4,3 +4,9 @@ C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\GameWorld
 C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CoreCompileInputs.cache
 C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\GameWorldLibrary\obj\Debug\GameWorldLibrary.dll
 C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\GameWorldLibrary\obj\Debug\GameWorldLibrary.pdb
+C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.AssemblyReference.cache
+C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CoreCompileInputs.cache
+C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.dll
+C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.pdb
+C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\bin\Debug\GameWorldLibrary.dll
+C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\bin\Debug\GameWorldLibrary.pdb

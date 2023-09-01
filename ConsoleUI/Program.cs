@@ -19,14 +19,14 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {            
-            string input;
             LoadGame.RunLoad();
 
             // Welcome the User
             DisplayRequested.DisplayWelcomeInstructions();
 
             // Create Character
-            World.player = Player.CreateNewPlayer();
+            //World.player = PlayerMaker.CreateNewPlayer();
+            World.player = new Player();
             LoadGame.InitializeStartingRoom(World.player);
 
             // Display Starting Room       
@@ -34,18 +34,17 @@ namespace ConsoleUI
             Console.WriteLine("");
 
             // Game Loop
-            while (Commands.keepGoing == 'y')
+            do
             {
                 //Get Input
                 DisplayRequested.DisplayCommandArrow();
 
-                input = Console.ReadLine();
-
                 Console.WriteLine("");
-                Commands.RunCommand(input.ToLower());
+                Command.GetInput();
                 Console.WriteLine("");
 
             }
+            while (Game.running) ;
             Console.ReadKey();
         }
 
