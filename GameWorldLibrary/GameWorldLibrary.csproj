@@ -55,6 +55,7 @@
     <Compile Include="Models\Treasure.cs" />
     <Compile Include="Models\Weapon.cs" />
     <Compile Include="Global\World.cs" />
+    <Compile Include="test.cs" />
     <Compile Include="UI\UserCommand.cs" />
     <Compile Include="UI\Convert.cs" />
     <Compile Include="UI\Input.cs" />
