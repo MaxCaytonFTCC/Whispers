@@ -14,7 +14,7 @@ namespace GameWorldLibrary
             Console.WriteLine("Create a character to begin\n");
         }
 
-        public static void DisplayGameInstructions()
+        public static void Help()
         {
             Console.WriteLine("Type \"help\" for a list of commands\n");
         }
@@ -36,85 +36,51 @@ namespace GameWorldLibrary
 
         }
 
-        public static void DisplayWeapons(int location)
+        public static void DisplayObject(int location, string type)
         {
-            if (World.rooms[location].RoomWeapons.Count < 1)
+            switch (type)
             {
-                Console.WriteLine("There are no weapons in this room.\n");
-            }
-            else
-            {
-                for (int i = 0; i < World.rooms[location].RoomWeapons.Count; i++)
-                {
-                    Console.WriteLine((i + 1).ToString() + ". " + World.rooms[location].RoomWeapons[i].Name);
-                    Console.WriteLine("Weapon Description: " + World.rooms[location].RoomWeapons[i].Description+"\n");
-                }
-            }
-        }
+                case "items":
+                    // Display Items
+                    World.rooms[location].InfoItems();
 
-        public static void DisplayPotions(int location)
-        {
-            if (World.rooms[location].RoomPotions.Count < 1)
-            {
-                Console.WriteLine("There are no potions in this room.\n");
-            }
-            else
-            {
-                for (int i = 0; i < World.rooms[location].RoomPotions.Count; i++)
-                {
-                    Console.WriteLine((i + 1).ToString() + ". " + World.rooms[location].RoomPotions[i].Name);
-                    Console.WriteLine("Potion Description: " + World.rooms[location].RoomPotions[i].Description + "\n");
-                }
-            }
-        }
+                    // Break
+                    break;
 
-        public static void DisplayTreasure(int location)
-        {
-            if (World.rooms[location].RoomTreasures.Count < 1)
-            {
-                Console.WriteLine("There are no treasures in this room.\n");
-            }
-            else
-            {
-                for (int i = 0; i < World.rooms[location].RoomTreasures.Count; i++)
-                {
-                    Console.WriteLine((i + 1).ToString() + ". " + World.rooms[location].RoomTreasures[i].Name);
-                    Console.WriteLine("Treasure Description: " + World.rooms[location].RoomTreasures[i].Description + "\n");
-                }
-            }
-        }
+                case "mobs":
+                    // Display Mobs
+                    World.rooms[location].InfoMobs();
 
-        public static void DisplayItems(int location)
-        {
-            if (World.rooms[location].RoomItems.Count < 1)
-            {
-                Console.WriteLine("There are no items in this room.\n");
-            }
+                    // Break
+                    break;
 
-            else
-            {
-                for (int i = 0; i < World.rooms[location].RoomItems.Count; i++)
-                {
-                    Console.WriteLine((i + 1).ToString() + ". " + World.rooms[location].RoomItems[i].Name);
-                    Console.WriteLine("Item Description: " + World.rooms[location].RoomItems[i].Description + "\n");
-                }
-            }
-        }
+                case "weapons":
+                    // Display Weapons
+                    World.rooms[location].InfoWeapons();
 
-        public static void DisplayMobs(int location)
-        {
-            if (World.rooms[location].RoomMobs.Count < 1)
-            {
-                Console.WriteLine("There are no mobs in this room.\n");
-            }
+                    // Break
+                    break;
+                
+                case "treasures":
+                    // Display Treasures
+                    World.rooms[location].InfoTreasures();
 
-            else
-            {
-                for (int i = 0; i < World.rooms[location].RoomMobs.Count; i++)
-                {
-                    Console.WriteLine((i + 1).ToString() + ". " + World.rooms[location].RoomMobs[i].Name);
-                    Console.WriteLine("Mob Description: " + World.rooms[location].RoomMobs[i].Description + "\n");
-                }
+                    // Break
+                    break;
+
+                case "potions":
+                    // Display Potions
+                    World.rooms[location].InfoPotions();
+
+                    // Break
+                    break;
+
+                default:
+                    // Should not run unless error
+                    Console.WriteLine("You shouldn't be here.");
+
+                    // Break
+                    break;
             }
         }
 

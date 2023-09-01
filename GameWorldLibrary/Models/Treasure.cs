@@ -8,9 +8,17 @@ namespace GameWorldLibrary
 {
     public class Treasure
     {
+        #region Properties
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Price { get; set; }
+        public bool QuestItem { get; set; }
+        public string Description { get; set; }
+        #endregion
+        #region Constructors
         // Default Constructor
         public Treasure() { }
-
+        // Constructor
         public Treasure(int id, string name, int price, bool questItem, string description)
         {
             ID = id;
@@ -19,11 +27,42 @@ namespace GameWorldLibrary
             QuestItem = questItem;
             Description = description;
         }
-
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public int Price { get; set; }
-        public bool QuestItem { get; set; }
-        public string Description { get; set; }
+        // Clone Constructor
+        public Treasure(Treasure basis)
+        {
+            ID = basis.ID;
+            Name = basis.Name;
+            Price = basis.Price;
+            QuestItem = basis.QuestItem;
+            Description = basis.Description;
+        }
+        #endregion
+        #region Methods
+        #region Info Methods
+        public void Info()
+        {
+            // Show info
+            Console.WriteLine(Name);
+            Console.WriteLine(Description);
+            Console.WriteLine();
+        }
+        public void InfoMore()
+        {
+            // Show more info
+            Console.WriteLine(ID);
+            Console.WriteLine(Name);
+            Console.WriteLine("$" + Price);
+            Console.WriteLine("Quest Item: " + QuestItem);
+            Console.WriteLine(Description);
+            Console.WriteLine();
+        }
+        #endregion
+        #region Use Methods
+        public void Use(Player user)
+        {
+            // Use code
+        }
+        #endregion
+        #endregion
     }
 }

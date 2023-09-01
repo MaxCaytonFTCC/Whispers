@@ -9,10 +9,25 @@ namespace GameWorldLibrary
 {
     public class Player
     {
-
+        #region Properties
+        public int ID { get; set; }                             // ID
+        public string Name { get; set; }                        // Name
+        public string Password { get; set; }                    // Password
+        public string Race { get; set; }                        // Race
+        public string CombatClass { get; set; }                 // Combat Class
+        public int HP { get; set; }                             // Health Points
+        public int AC { get; set; }                             // im dumb i cant remember what this means
+        public Room Location { get; set; }                      // Location
+        public List<Item> ItemInventory { get; set; }           // Items
+        public List<Potion> PotionInventory { get; set; }       // Potions
+        public List<Weapon> WeaponInventory { get; set; }       // Weapons
+        public List<Treasure> TreasureInventory { get; set; }   // Treasures
+        public List<string> Quests { get; set; }                // Quests
+        #endregion
+        #region Constructors
         // Default Constructor
         public Player() { }
-
+        // Constructor
         public Player(int id, string name, string password, string race, string combatClass, int hp, int ac, int location, List<Item> itemInventory, List<Potion> potionInventory, List<Weapon> weaponInventory, List<Treasure> treasureInventory, List<string> quests)
         {
             ID = id;
@@ -29,21 +44,28 @@ namespace GameWorldLibrary
             TreasureInventory = treasureInventory;
             Quests = quests;
         }
-
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string Password { get; set; }
-        public string Race { get; set; }
-        public string CombatClass { get; set; }
-        public int HP { get; set; }
-        public int AC { get; set; }
-        public int Location { get; set; }
-        public List<Item> ItemInventory { get; set; }
-        public List<Potion> PotionInventory { get; set; }
-        public List<Weapon> WeaponInventory { get; set; }
-        public List<Treasure> TreasureInventory { get; set; }
-        public List<string> Quests { get; set; }
-
+        #endregion
+        #region Methods
+        #region Info Methods
+        public void Info()
+        {
+            // Show info
+            Console.WriteLine(Name);
+            Console.WriteLine(Race);
+            Console.WriteLine(CombatClass);
+            Console.WriteLine();
+        }
+        public void InfoMore()
+        {
+            // Show more info
+            Console.WriteLine(ID);
+            Console.WriteLine(Name);
+            Console.WriteLine(Race);
+            Console.WriteLine(CombatClass);
+            Console.WriteLine();
+        }
+        #endregion
+        #endregion
         #region Public Methods
 
         public static Player CreateNewPlayer()
