@@ -50,6 +50,7 @@
     <Compile Include="Combat.cs" />
     <Compile Include="DisplayRequested.cs" />
     <Compile Include="Global\Game.cs" />
+    <Compile Include="Models\Damage.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="LoadGame.cs" />
     <Compile Include="Models\Mob.cs" />
