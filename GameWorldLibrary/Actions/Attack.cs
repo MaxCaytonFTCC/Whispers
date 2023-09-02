@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public static class Game
+    public static class Attack
     {
-        // Boolean for game running
-        public static bool running = true;
-
-        // Action list
     }
 }

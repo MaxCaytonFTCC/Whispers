@@ -13,10 +13,10 @@ namespace GameWorldLibrary
         public static string[] Keywords { get;} = { "help", "command", "commands" };    // Action Keywords
         #endregion
         #region Methods
-        public static void Activate(Player user)
+        public static void Activate()
         {
-            // Move player to another room
-            Console.WriteLine("Move");  // Debug
+            // Display all commands (Use Action List in Game class)
+            Console.WriteLine("Help");  // Placeholder
         }
         #endregion
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    class PickUp
+    public static class PickUp
     {
     }
 }

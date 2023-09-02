@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\Attack.cs" />
     <Compile Include="Actions\Drop.cs" />
     <Compile Include="Actions\Help.cs" />
     <Compile Include="Actions\PickUp.cs" />
     <Compile Include="Actions\Quit.cs" />
+    <Compile Include="Actions\Use.cs" />
     <Compile Include="Combat.cs" />
     <Compile Include="DisplayRequested.cs" />
     <Compile Include="Global\Game.cs" />

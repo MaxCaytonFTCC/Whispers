@@ -206,7 +206,6 @@ namespace GameWorldLibrary
 
         }
 
-
         public static List<Weapon> GetWeapons(string weapons)
         {
             string[] tokens = weapons.Split('_');
@@ -225,7 +224,6 @@ namespace GameWorldLibrary
             return weaponList;
 
         }
-
 
         public static List<Treasure> GetTreasure(string treasures)
         {

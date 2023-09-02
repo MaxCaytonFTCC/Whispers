@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    class Drop
+    public static class Drop
     {
+
     }
 }

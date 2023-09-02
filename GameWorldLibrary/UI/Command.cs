@@ -13,26 +13,35 @@ namespace GameWorldLibrary
             // Get command tokens from player
             string[] tokens = Input.Tokens();
 
-            // If token count is greater than 1
-            ReadInput(tokens[0]);
-            // If token count equals 1
-            // Read input with parameters
+            // Read the user's input
+            ReadInput(tokens);
         }
-
-        static void ReadInput(string command)
+        static void ReadInput(string[] input)
         {
+            // If the Help action is called
+            if (Help.Keywords.Contains(input[0]))
+            {
+                // Display Help
+                Help.Activate();
+            }
+
             // If the Move action is called
-            if (Move.Keywords.Contains(command))
+            if (Move.Keywords.Contains(input[0]))
             {
                 // Move the player
                 Move.Activate(World.player);
             }
 
+            // If the Pick Up action is called
+            // If the Drop action is called
+            // If the Use action is called
+            // If the Attack action is called
+
             // If the Quit action is called
-            if (Quit.Keywords.Contains(command))
+            if (Quit.Keywords.Contains(input[0]))
             {
                 // Quit the game
-                Quit.Activate(World.player);
+                Quit.Activate();
             }
 
             // Readline debug

@@ -37,15 +37,12 @@ namespace ConsoleUI
             do
             {
                 //Get Input
-                DisplayRequested.DisplayCommandArrow();
-
                 Console.WriteLine("");
                 Command.GetInput();
                 Console.WriteLine("");
 
             }
-            while (Game.running) ;
-            Console.ReadKey();
+            while (Game.running);
         }
 
     }

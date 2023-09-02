@@ -13,7 +13,7 @@ namespace GameWorldLibrary
         public static string[] Keywords { get;} = { "quit"};    // Action Keywords
         #endregion
         #region Methods
-        public static void Activate(Player user)
+        public static void Activate()
         {
             // Quit the game
             Game.running = false;
