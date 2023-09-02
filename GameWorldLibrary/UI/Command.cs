@@ -49,14 +49,32 @@ namespace GameWorldLibrary
             }
 
             // If the Pick Up action is called
+            if (PickUp.Keywords.Contains(input[0]))
+            {
+                // Pick Up and object
+                //PickUp.Activate(World.player);
+            }
+
             // If the Drop action is called
+            if (Drop.Keywords.Contains(input[0]))
+            {
+                // Drop an object
+                //Drop.Activate(World.player);
+            }
+
             // If the Use action is called
             if (Use.Keywords.Contains(input[0]))
             {
                 // Use inventory
                 Use.Activate(World.player);
             }
+
             // If the Attack action is called
+            if (Attack.Keywords.Contains(input[0]))
+            {
+                // Attack a mob
+                //Attack.Activate(World.player);
+            }
         }
     }
 }

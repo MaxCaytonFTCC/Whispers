@@ -31,6 +31,44 @@ namespace GameWorldLibrary
         #region Command + Option Methods
         public static void Activate(Player user, string direction)
         {
+            // Switch
+            switch (direction)
+            {
+                // Player wants to move north
+                case "north":
+                    // Move player to north exit
+                    // Break
+                    break;
+
+                // Player wants to move south
+                case "south":
+                    // Move player to north exit
+                    // Break
+                    break;
+
+                // Player wants to move east
+                case "east":
+                    // Move player to north exit
+                    // Break
+                    break;
+
+                // Player wants to move west
+                case "west":
+                    // Move player to north exit
+                    // Break
+                    break;
+
+                // Player wants to cancel
+                case "cancel":
+                    // Break
+                    break;
+
+                // Invalid direction
+                default:
+                    // Print no direction string
+                    // Break
+                    break;
+            }
             // Move player to another room
             Console.WriteLine("Move");  // Placeholder
         }

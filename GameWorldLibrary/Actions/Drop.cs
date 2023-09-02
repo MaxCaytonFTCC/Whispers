@@ -8,6 +8,12 @@ namespace GameWorldLibrary
 {
     public static class Drop
     {
-
+        #region Properties
+        public static string Name { get; } = "Drop";            // Action Name
+        public static string[] Keywords { get; } = { "drop" };  // Action Keywords
+        public static string[] Options { get; } = { };          // Action Choices
+        #endregion
+        #region Methods
+        #endregion
     }
 }

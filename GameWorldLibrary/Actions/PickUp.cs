@@ -8,5 +8,12 @@ namespace GameWorldLibrary
 {
     public static class PickUp
     {
+        #region Properties
+        public static string Name { get; } = "Pick Up";         // Action Name
+        public static string[] Keywords { get; } = { "take" };  // Action Keywords
+        public static string[] Options { get; } = { };          // Action Choices
+        #endregion
+        #region Methods
+        #endregion
     }
 }

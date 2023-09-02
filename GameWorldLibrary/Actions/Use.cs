@@ -36,42 +36,42 @@ namespace GameWorldLibrary
             {
                 // Player wants to use Items
                 case "items":
-                    // Display Item choices
-                    
+                    // Get Item selection
+                    Activate(user, Menu.Run(user.ItemInventory.ToArray()));
 
                     // Break
                     break;
 
                 // Player wants to use Potions
                 case "potions":
-                    // Display Potion choices
-                    
+                    // Get Potion selection
+                    Activate(user, Menu.Run(user.PotionInventory.ToArray()));
 
                     // Break
                     break;
 
                 // Player wants to use Treasures
                 case "treasures":
-                    // Display Treasure choices
-                    
+                    // Get Treasure selection
+                    Activate(user, Menu.Run(user.TreasureInventory.ToArray()));
 
                     // Break
                     break;
 
                 // Player wants to use Weapons
                 case "weapons":
-                    // Display Weapon choices
-                    
+                    // Get Weapon selection
+                    Activate(user, Menu.Run(user.WeaponInventory.ToArray()));
 
                     // Break
                     break;
 
                 // Player wants to Cancel Action
                 default:
+                    Console.WriteLine("Cancel");  // Placeholder
                     // Break
                     break;
             }
-            Console.WriteLine();  // Placeholder
         }
         #endregion
         #region Command + Object Methods
