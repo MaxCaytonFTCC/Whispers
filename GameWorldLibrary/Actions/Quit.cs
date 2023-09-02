@@ -17,6 +17,8 @@ namespace GameWorldLibrary
         {
             // Quit the game
             Game.running = false;
+
+            // Display Goodbye
         }
         #endregion
     }

@@ -18,10 +18,10 @@ namespace GameWorldLibrary
         public int AC { get; set; }                             // im dumb i cant remember what this means
         public int Location { get; set; }                       // Location
         public Room CurrentRoom { get; set; }                   // Location (Will replace location)
-        public List<Item> ItemInventory { get; set; }           // Items
-        public List<Potion> PotionInventory { get; set; }       // Potions
-        public List<Weapon> WeaponInventory { get; set; }       // Weapons
-        public List<Treasure> TreasureInventory { get; set; }   // Treasures
+        public List<Item> ItemInventory { get; set; } = new List<Item>();               // Items
+        public List<Potion> PotionInventory { get; set; } = new List<Potion>();         // Potions
+        public List<Weapon> WeaponInventory { get; set; } = new List<Weapon>();         // Weapons
+        public List<Treasure> TreasureInventory { get; set; } = new List<Treasure>();   // Treasures
         public List<string> Quests { get; set; }                // Quests
         #endregion
         #region Constructors

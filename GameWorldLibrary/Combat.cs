@@ -12,7 +12,7 @@ namespace GameWorldLibrary
         {
             /*
             // Get the player's weapon of choice
-            DisplayRequested.DisplayWeaponInstructions();
+            Display.DisplayWeaponInstructions();
             Weapon playerWeapon = Player.SelectWeapon(player);
 
             int playerDamage = playerWeapon.Damage;
@@ -69,7 +69,7 @@ namespace GameWorldLibrary
                         Console.Write(player.Name + " has died! Overkill: " +Math.Abs(playerHP).ToString() + " \n\n");
 
                         // Kill the player and make a new one
-                        DisplayRequested.DisplayDeathMessage();
+                        Display.DisplayDeathMessage();
                         World.rooms[player.Location].RoomPlayers.Remove(player);                        
                         World.player = new Player(player.ID, player.Name, player.Password, player.Race, player.CombatClass, 100, 0, 0, new List<Item>(), new List<Potion>(), new List<Weapon>(), new List<Treasure>(), new List<string>());
                         World.rooms[0].RoomPlayers.Add(World.player);

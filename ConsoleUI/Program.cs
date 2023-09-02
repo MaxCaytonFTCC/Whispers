@@ -22,22 +22,17 @@ namespace ConsoleUI
             LoadGame.RunLoad();
 
             // Welcome the User
-            DisplayRequested.DisplayWelcomeInstructions();
+            Display.DisplayWelcomeInstructions();
 
             // Create Character
             //World.player = PlayerMaker.CreateNewPlayer();
             World.player = new Player();
             LoadGame.InitializeStartingRoom(World.player);
 
-            // Display Starting Room       
-            DisplayRequested.DisplayRooms(0);
-            Console.WriteLine("");
-
             // Game Loop
             do
             {
                 //Get Input
-                Console.WriteLine("");
                 Command.GetInput();
                 Console.WriteLine("");
 

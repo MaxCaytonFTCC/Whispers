@@ -13,25 +13,25 @@ namespace GameWorldLibrary
 
         public static Player CreateNewPlayer()
         {
-            DisplayRequested.DisplayCharacterCreatorBanner();
+            Display.DisplayCharacterCreatorBanner();
 
             string name, password, race, combatClass;
             Player newPlayer;
 
             // Select Race
-            DisplayRequested.DisplayRaceInstructions();
+            Display.DisplayRaceInstructions();
             race = GetCharacterChoice(new string[] { "Undead", "Elemental", "Demon", "Mechanical" });
 
             // Select Class
-            DisplayRequested.DisplayClassInstructions();
+            Display.DisplayClassInstructions();
             combatClass = GetCharacterChoice(new string[] { "Warrior", "Necromancer", "Assassin", "Firelord" });
 
             // Get Name
-            DisplayRequested.DisplayNameInstructions();
+            Display.DisplayNameInstructions();
             name = GetCharacterName(Console.ReadLine());
 
             // Get Password
-            DisplayRequested.DisplayPasswordInstructions();
+            Display.DisplayPasswordInstructions();
             password = GetCharacterPassword(Console.ReadLine());
             Console.WriteLine("");
 
@@ -50,7 +50,7 @@ namespace GameWorldLibrary
         #region Private Methods
         private static string GetCharacterChoice(string[] options)
         {
-            return Input.StrArray(options);
+            return Input.Option(options);
         }
 
         private static string GetCharacterName(string playerName)
@@ -60,7 +60,7 @@ namespace GameWorldLibrary
 
             if (playerName.Length > maxChars)
             {
-                DisplayRequested.DisplayInputTooLongError();
+                Display.DisplayInputTooLongError();
                 return GetCharacterName(Console.ReadLine());
             }
 
@@ -104,7 +104,7 @@ namespace GameWorldLibrary
             }
             else
             {
-                DisplayRequested.DisplayPasswordError();
+                Display.DisplayPasswordError();
                 return GetCharacterPassword(Console.ReadLine());
             }
 
@@ -123,7 +123,7 @@ namespace GameWorldLibrary
             }
             catch
             {
-                DisplayRequested.DisplayGeneralError();
+                Display.DisplayGeneralError();
             }
         }
 

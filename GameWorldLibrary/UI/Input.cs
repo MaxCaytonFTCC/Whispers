@@ -8,6 +8,7 @@ namespace GameWorldLibrary
 {
     public static class Input
     {
+        #region Basic Return Methods
         public static int Int()        // Get an integer input from the player
         {
             // Loop
@@ -31,8 +32,9 @@ namespace GameWorldLibrary
                 }
             }
         }
-
-        public static string[] Tokens()
+        #endregion
+        #region Array Return Methods
+        public static string[] StrArray()
         {
             // Loop?
             // In case command token (tokens[0]) does not match any known command keyword
@@ -43,33 +45,194 @@ namespace GameWorldLibrary
             // Return string input
             return Console.ReadLine().ToLower().Split(' ');
         }
-
-        public static string StrArray(string[] array)
-        { 
-            /* Input for String Array
-             * ======================
-             * Designed to return a choice from an array of string options
-             */
-
-            // Catch input that is not a valid index
-            try
+        #endregion
+        #region Option Return Methods
+        public static string Option(string[] array)
+        {
+            // Loop
+            while (true)
             {
-                // Prompt user
-                for (int i = 0; i < array.Length; i++)
+                // Catch input that is not a valid index
+                try
                 {
-                    // Print options and index + 1
-                    Console.WriteLine($"{i + 1}. {array[i]}");
-                }
-                // Get index input from user
+                    // Get player index input
+                    int input = Int() - 1;
 
+                    // If index is on the Cancel
+                    if (input == array.Length)
+                    {
+                        // Return no items
+                        return "cancel";
+                    }
+                    // If input is not on Cancel
+                    else
+                    {
+                        // Get an Item from index input
+                        return array[input].ToLower();
+                    }
+                }
+                // Player enters incorrectly
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
-            // Player enters incorrectly
-            catch (Exception e)
-            {
-                // Print error message
-                Console.WriteLine(e.Message);
-            }
-            return "";  // DEBUG
         }
+        public static Item Option(Item[] array)
+        {
+            while (true)
+            {
+                // Catch input that is not a valid index
+                try
+                {
+                    // Get player index input
+                    int input = Int() - 1;
+
+                    // If index is on the Cancel
+                    if (input == array.Length)
+                    {
+                        // Return no Items
+                        return null;
+                    }
+                    // If input is not on Cancel
+                    else
+                    {
+                        // Get an Item from index input
+                        return array[input];
+                    }
+                }
+                // Player enters incorrectly
+                catch (Exception e)
+                {
+                    // Print error message
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+        public static Potion Option(Potion[] array)
+        {
+            while (true)
+            {
+                // Catch input that is not a valid index
+                try
+                {
+                    // Get player index input
+                    int input = Int() - 1;
+
+                    // If index is on the Cancel
+                    if (input == array.Length)
+                    {
+                        // Return no Potions
+                        return null;
+                    }
+                    // If input is not on Cancel
+                    else
+                    {
+                        // Get a Potion from index input
+                        return array[input];
+                    }
+                }
+                // Player enters incorrectly
+                catch (Exception e)
+                {
+                    // Print error message
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+        public static Treasure Option(Treasure[] array)
+        {
+            while (true)
+            {
+                // Catch input that is not a valid index
+                try
+                {
+                    // Get player index input
+                    int input = Int() - 1;
+
+                    // If index is on the Cancel
+                    if (input == array.Length)
+                    {
+                        // Return no Treasures
+                        return null;
+                    }
+                    // If input is not on Cancel
+                    else
+                    {
+                        // Get a Treasure from index input
+                        return array[input];
+                    }
+                }
+                // Player enters incorrectly
+                catch (Exception e)
+                {
+                    // Print error message
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+        public static Weapon Option(Weapon[] array)
+        {
+            while (true)
+            {
+                // Catch input that is not a valid index
+                try
+                {
+                    // Get player index input
+                    int input = Int() - 1;
+
+                    // If index is on the Cancel
+                    if (input == array.Length)
+                    {
+                        // Return no Weapons
+                        return null;
+                    }
+                    // If input is not on Cancel
+                    else
+                    {
+                        // Get a Weapon from index input
+                        return array[input];
+                    }
+                }
+                // Player enters incorrectly
+                catch (Exception e)
+                {
+                    // Print error message
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+        public static Mob Option(Mob[] array)
+        {
+            while (true)
+            {
+                // Catch input that is not a valid index
+                try
+                {
+                    // Get player index input
+                    int input = Int() - 1;
+
+                    // If index is on the Cancel
+                    if (input == array.Length)
+                    {
+                        // Return no Mobs
+                        return null;
+                    }
+                    // If input is not on Cancel
+                    else
+                    {
+                        // Get a Mob from index input
+                        return array[input];
+                    }
+                }
+                // Player enters incorrectly
+                catch (Exception e)
+                {
+                    // Print error message
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+        #endregion
     }
 }

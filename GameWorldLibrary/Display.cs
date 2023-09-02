@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public static class DisplayRequested
+    public static class Display
     {
         public static void DisplayWelcomeInstructions()
         {
@@ -18,6 +18,21 @@ namespace GameWorldLibrary
         {
             Console.WriteLine("Type \"help\" for a list of commands\n");
         }
+
+        #region Info Methods
+        #endregion
+
+        #region Menu Methods
+        public static void Menu(string[] array)        // String Menu
+        {
+            // Display the String Menu
+            for (int i = 0; i < array.Length; i++)
+            {
+                // Print options and index + 1
+                Console.WriteLine($"[{i + 1}] {array[i]}");
+            }
+        }
+        #endregion
 
         public static void DisplayRooms(int location)
         {
