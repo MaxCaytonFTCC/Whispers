@@ -14,7 +14,7 @@ namespace GameWorldLibrary
             Console.Clear();
 
             // Display Room Info
-            World.rooms[World.player.Location].Info(); ;
+            World.rooms[World.player.Location].Info();
 
             // Get command tokens from player
             string[] tokens = Input.StrArray();
@@ -39,6 +39,13 @@ namespace GameWorldLibrary
             {
                 // Quit the game
                 Quit.Activate();
+            }
+
+            // If the Look action is called
+            if (Look.Keywords.Contains(input[0]))
+            {
+                // Look at the Objects in the Room
+                Look.Activate(World.player);
             }
 
             // If the Move action is called
