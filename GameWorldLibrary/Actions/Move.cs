@@ -21,7 +21,7 @@ namespace GameWorldLibrary
             Console.WriteLine($"[{Name.ToUpper()}]");
 
             // Prompt user for direction
-            string input = Menu.Run(Options);
+            string input = Menu.Run(Options, true);
 
             // If option is not Cancel, move to direction
             Activate(user, input);

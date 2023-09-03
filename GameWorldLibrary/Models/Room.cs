@@ -13,6 +13,7 @@ namespace GameWorldLibrary
         public string Name { get; set; }
         public string Description { get; set; }
         public string[] Exits { get; set; }
+        // public int[] Exits { get; set; }
         public List<Item> RoomItems { get; set; }
         public List<Mob> RoomMobs { get; set; }
         public List<Weapon> RoomWeapons { get; set; }

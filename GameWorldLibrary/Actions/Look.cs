@@ -21,7 +21,7 @@ namespace GameWorldLibrary
             Console.WriteLine($"[{Name.ToUpper()}]");
 
             // Prompt user for object type
-            string input = Menu.Run(Options);
+            string input = Menu.Run(Options, true);
 
             // Move to Command + Option Method
             Activate(user, input); // Debug

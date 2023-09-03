@@ -25,8 +25,8 @@ namespace ConsoleUI
             Display.DisplayWelcomeInstructions();
 
             // Create Character
-            //World.player = PlayerMaker.CreateNewPlayer();
-            World.player = new Player();
+            World.player = PlayerMaker.CreateNewPlayer();
+            //World.player = new Player();
             LoadGame.InitializeStartingRoom(World.player);
 
             // Game Loop

@@ -21,7 +21,7 @@ namespace GameWorldLibrary
             Console.WriteLine($"[{Name.ToUpper()}]");
 
             // Prompt user for object type
-            string input = Menu.Run(Options);
+            string input = Menu.Run(Options, true);
 
             // Move to Command + Option Method
             Activate(user, input); // Debug
@@ -37,7 +37,7 @@ namespace GameWorldLibrary
                 // Player wants to use Items
                 case "items":
                     // Get Item selection
-                    Activate(user, Menu.Run(user.ItemInventory.ToArray()));
+                    Activate(user, Menu.Run(user.ItemInventory.ToArray(), true));
 
                     // Break
                     break;
@@ -45,7 +45,7 @@ namespace GameWorldLibrary
                 // Player wants to use Potions
                 case "potions":
                     // Get Potion selection
-                    Activate(user, Menu.Run(user.PotionInventory.ToArray()));
+                    Activate(user, Menu.Run(user.PotionInventory.ToArray(), true));
 
                     // Break
                     break;
@@ -53,7 +53,7 @@ namespace GameWorldLibrary
                 // Player wants to use Treasures
                 case "treasures":
                     // Get Treasure selection
-                    Activate(user, Menu.Run(user.TreasureInventory.ToArray()));
+                    Activate(user, Menu.Run(user.TreasureInventory.ToArray(), true));
 
                     // Break
                     break;
@@ -61,7 +61,7 @@ namespace GameWorldLibrary
                 // Player wants to use Weapons
                 case "weapons":
                     // Get Weapon selection
-                    Activate(user, Menu.Run(user.WeaponInventory.ToArray()));
+                    Activate(user, Menu.Run(user.WeaponInventory.ToArray(), true));
 
                     // Break
                     break;

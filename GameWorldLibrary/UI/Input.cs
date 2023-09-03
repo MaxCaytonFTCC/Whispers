@@ -47,7 +47,7 @@ namespace GameWorldLibrary
         }
         #endregion
         #region Option Return Methods
-        public static string Option(string[] array)
+        public static string Option(string[] array, bool canCancel)
         {
             // Loop
             while (true)
@@ -59,7 +59,7 @@ namespace GameWorldLibrary
                     int input = Int() - 1;
 
                     // If index is on the Cancel
-                    if (input == array.Length)
+                    if (input == array.Length && canCancel)
                     {
                         // Return no items
                         return "cancel";
@@ -78,7 +78,7 @@ namespace GameWorldLibrary
                 }
             }
         }
-        public static Item Option(Item[] array)
+        public static Item Option(Item[] array, bool canCancel)
         {
             while (true)
             {
@@ -89,7 +89,7 @@ namespace GameWorldLibrary
                     int input = Int() - 1;
 
                     // If index is on the Cancel
-                    if (input == array.Length)
+                    if (input == array.Length && canCancel)
                     {
                         // Return no Items
                         return null;
@@ -109,7 +109,7 @@ namespace GameWorldLibrary
                 }
             }
         }
-        public static Potion Option(Potion[] array)
+        public static Potion Option(Potion[] array, bool canCancel)
         {
             while (true)
             {
@@ -120,7 +120,7 @@ namespace GameWorldLibrary
                     int input = Int() - 1;
 
                     // If index is on the Cancel
-                    if (input == array.Length)
+                    if (input == array.Length && canCancel)
                     {
                         // Return no Potions
                         return null;
@@ -140,7 +140,7 @@ namespace GameWorldLibrary
                 }
             }
         }
-        public static Treasure Option(Treasure[] array)
+        public static Treasure Option(Treasure[] array, bool canCancel)
         {
             while (true)
             {
@@ -151,7 +151,7 @@ namespace GameWorldLibrary
                     int input = Int() - 1;
 
                     // If index is on the Cancel
-                    if (input == array.Length)
+                    if (input == array.Length && canCancel)
                     {
                         // Return no Treasures
                         return null;
@@ -171,7 +171,7 @@ namespace GameWorldLibrary
                 }
             }
         }
-        public static Weapon Option(Weapon[] array)
+        public static Weapon Option(Weapon[] array, bool canCancel)
         {
             while (true)
             {
@@ -182,7 +182,7 @@ namespace GameWorldLibrary
                     int input = Int() - 1;
 
                     // If index is on the Cancel
-                    if (input == array.Length)
+                    if (input == array.Length && canCancel)
                     {
                         // Return no Weapons
                         return null;
@@ -202,7 +202,7 @@ namespace GameWorldLibrary
                 }
             }
         }
-        public static Mob Option(Mob[] array)
+        public static Mob Option(Mob[] array, bool canCancel)
         {
             while (true)
             {
@@ -213,7 +213,7 @@ namespace GameWorldLibrary
                     int input = Int() - 1;
 
                     // If index is on the Cancel
-                    if (input == array.Length)
+                    if (input == array.Length && canCancel)
                     {
                         // Return no Mobs
                         return null;

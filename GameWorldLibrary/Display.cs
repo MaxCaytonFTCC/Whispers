@@ -99,84 +99,6 @@ namespace GameWorldLibrary
             }
         }
 
-        public static void DisplayPlayerInventory(Player player, string type)
-        {
-            switch (type)
-            {
-                case "weapons":
-                case "weapon":
-
-                    if (player.WeaponInventory.Count < 1)
-                    {
-                        Console.WriteLine("There are no weapons in your inventory.\n");
-                    }
-                    else
-                    {
-                        for (int i = 0; i < player.WeaponInventory.Count; i++)
-                        {
-                            Console.WriteLine((i + 1).ToString() + ". " + player.WeaponInventory[i].Name);
-                            Console.WriteLine("Weapon Description: " + player.WeaponInventory[i].Description + "\n");
-                        }
-                    }
-
-                    break;
-
-                case "items":
-                case "item":
-
-                    if (player.ItemInventory.Count < 1)
-                    {
-                        Console.WriteLine("There are no items in your inventory.\n");
-                    }
-                    else
-                    {
-                        for (int i = 0; i < player.ItemInventory.Count; i++)
-                        {
-                            Console.WriteLine((i + 1).ToString() + ". " + player.ItemInventory[i].Name);
-                            Console.WriteLine("Item Description: " + player.ItemInventory[i].Description + "\n");
-                        }
-                    }
-
-                    break;
-
-                case "treasures":
-                case "treasure":
-
-                    if (player.TreasureInventory.Count < 1)
-                    {
-                        Console.WriteLine("There are no treasures in your inventory.\n");
-                    }
-                    else
-                    {
-                        for (int i = 0; i < player.TreasureInventory.Count; i++)
-                        {
-                            Console.WriteLine((i + 1).ToString() + ". " + player.TreasureInventory[i].Name);
-                            Console.WriteLine("Treasure Description: " + player.TreasureInventory[i].Description + "\n");
-                        }
-                    }
-
-                    break;
-
-                case "potions":
-                case "potion":
-
-                    if (player.PotionInventory.Count < 1)
-                    {
-                        Console.WriteLine("There are no potions in your inventory.\n");
-                    }
-                    else
-                    {
-                        for (int i = 0; i < player.PotionInventory.Count; i++)
-                        {
-                            Console.WriteLine((i + 1).ToString() + ". " + player.PotionInventory[i].Name);
-                            Console.WriteLine("Potion Description: " + player.PotionInventory[i].Description + "\n");
-                        }
-                    }
-
-                    break;
-            }
-        }
-
         public static void DisplayCommandArrow()
         {
             Console.Write("=> ");
@@ -219,18 +141,6 @@ namespace GameWorldLibrary
         public static void DisplayNameInstructions()
         {
             Console.Write("\nEnter your name: ");
-        }
-
-        public static void DisplayRaceInstructions()
-        {
-            Console.Write("\n--Select a Race for your Character--\n" +
-                             "1. Undead\n2. Elemental\n3. Demon\n4. Mechanical\nChoice: ");
-        }
-
-        public static void DisplayClassInstructions()
-        {
-            Console.Write("\n--Select a Class for your Character--\n" +
-                             "1. Warrior\n2. Necromancer\n3. Assassin\n4. Firelord\nChoice: ");
         }
 
         public static void DisplayNoWeaponMessage()

@@ -9,86 +9,87 @@ namespace GameWorldLibrary
     public static class Menu
     {
         #region Run Methods
-        public static string Run(string[] array)        // Returns a String from an array
+        public static string Run(string[] array, bool canCancel)        // Returns a String from an array
         {
             // Create an Array using the Strings and a Cancel
-            string[] menu = ToMenu(array);
+            string[] menu = ToMenu(array, canCancel);
 
             // Display the menu
             Display.Menu(menu);
 
             // Get user input
-            return Input.Option(array);
+            return Input.Option(array, canCancel);
         }
-        public static Item Run(Item[] array)            // Returns an Item from an array
+        public static Item Run(Item[] array, bool canCancel)            // Returns an Item from an array
         {
             // Create an Array using the Item Names and a Cancel
-            string[] menu = ToMenu(array);
+            string[] menu = ToMenu(array, canCancel);
 
             // Display the menu
             Display.Menu(menu);
 
             // Get user input
-            return Input.Option(array);
+            return Input.Option(array, canCancel);
         }
-        public static Potion Run(Potion[] array)        // Returns a Potion from an array
+        public static Potion Run(Potion[] array, bool canCancel)        // Returns a Potion from an array
         {
             // Create an Array using the Item Names and a Cancel
-            string[] menu = ToMenu(array);
+            string[] menu = ToMenu(array, canCancel);
 
             // Display the menu
             Display.Menu(menu);
 
             // Get user input
-            return Input.Option(array);
+            return Input.Option(array, canCancel);
         }
-        public static Treasure Run(Treasure[] array)    // Returns a Treasure from an array
+        public static Treasure Run(Treasure[] array, bool canCancel)    // Returns a Treasure from an array
         {
             // Create an Array using the Item Names and a Cancel
-            string[] menu = ToMenu(array);
+            string[] menu = ToMenu(array, canCancel);
 
             // Display the menu
             Display.Menu(menu);
 
             // Get user input
-            return Input.Option(array);
+            return Input.Option(array, canCancel);
         }
-        public static Weapon Run(Weapon[] array)        // Returns a Weapon from an array
+        public static Weapon Run(Weapon[] array, bool canCancel)        // Returns a Weapon from an array
         {
             // Create an Array using the Item Names and a Cancel
-            string[] menu = ToMenu(array);
+            string[] menu = ToMenu(array, canCancel);
 
             // Display the menu
             Display.Menu(menu);
 
             // Get user input
-            return Input.Option(array);
+            return Input.Option(array, canCancel);
         }
-        public static Mob Run(Mob[] array)              // Returns a Mob from an array
+        public static Mob Run(Mob[] array, bool canCancel)              // Returns a Mob from an array
         {
             // Create an Array using the Item Names and a Cancel
-            string[] menu = ToMenu(array);
+            string[] menu = ToMenu(array, canCancel);
 
             // Display the menu
             Display.Menu(menu);
 
             // Get user input
-            return Input.Option(array);
+            return Input.Option(array, canCancel);
         }
         #endregion
         #region ToMenu Methods
-        static string[] ToMenu(string[] array)          // String array to Menu
+        static string[] ToMenu(string[] array, bool canCancel)          // String array to Menu
         {
             // Turn array to list
             List<string> menu = array.ToList();
 
             // Add Cancel
-            menu.Add("Cancel");
+            if (canCancel)
+                menu.Add("Cancel");
 
             // Return menu
             return menu.ToArray();
         }
-        static string[] ToMenu(Item[] array)            // Item array to Menu
+        static string[] ToMenu(Item[] array, bool canCancel)            // Item array to Menu
         {
             // Create list
             List<string> menu = new List<string>();
@@ -100,12 +101,13 @@ namespace GameWorldLibrary
             }
 
             // Add Cancel
-            menu.Add("Cancel");
+            if (canCancel)
+                menu.Add("Cancel");
 
             // Return menu
             return menu.ToArray();
         }
-        static string[] ToMenu(Potion[] array)          // Potion array to Menu
+        static string[] ToMenu(Potion[] array, bool canCancel)          // Potion array to Menu
         {
             // Create list
             List<string> menu = new List<string>();
@@ -117,12 +119,13 @@ namespace GameWorldLibrary
             }
 
             // Add Cancel
-            menu.Add("Cancel");
+            if (canCancel)
+                menu.Add("Cancel");
 
             // Return menu
             return menu.ToArray();
         }
-        static string[] ToMenu(Treasure[] array)        // Treasure array to Menu
+        static string[] ToMenu(Treasure[] array, bool canCancel)        // Treasure array to Menu
         {
             // Create list
             List<string> menu = new List<string>();
@@ -134,12 +137,13 @@ namespace GameWorldLibrary
             }
 
             // Add Cancel
-            menu.Add("Cancel");
+            if (canCancel)
+                menu.Add("Cancel");
 
             // Return menu
             return menu.ToArray();
         }
-        static string[] ToMenu(Weapon[] array)          // Weapon array to Menu
+        static string[] ToMenu(Weapon[] array, bool canCancel)          // Weapon array to Menu
         {
             // Create list
             List<string> menu = new List<string>();
@@ -151,12 +155,13 @@ namespace GameWorldLibrary
             }
 
             // Add Cancel
-            menu.Add("Cancel");
+            if (canCancel)
+                menu.Add("Cancel");
 
             // Return menu
             return menu.ToArray();
         }
-        static string[] ToMenu(Mob[] array)             // Mob array to Menu
+        static string[] ToMenu(Mob[] array, bool canCancel)             // Mob array to Menu
         {
             // Create list
             List<string> menu = new List<string>();
@@ -168,7 +173,8 @@ namespace GameWorldLibrary
             }
 
             // Add Cancel
-            menu.Add("Cancel");
+            if (canCancel)
+                menu.Add("Cancel");
 
             // Return menu
             return menu.ToArray();

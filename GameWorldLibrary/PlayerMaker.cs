@@ -19,12 +19,10 @@ namespace GameWorldLibrary
             Player newPlayer;
 
             // Select Race
-            Display.DisplayRaceInstructions();
-            race = GetCharacterChoice(new string[] { "Undead", "Elemental", "Demon", "Mechanical" });
+            race = Menu.Run(new string[] { "Undead", "Elemental", "Demon", "Mechanical" }, false);
 
             // Select Class
-            Display.DisplayClassInstructions();
-            combatClass = GetCharacterChoice(new string[] { "Warrior", "Necromancer", "Assassin", "Firelord" });
+            combatClass = Menu.Run(new string[] { "Warrior", "Necromancer", "Assassin", "Firelord" }, false);
 
             // Get Name
             Display.DisplayNameInstructions();
@@ -48,11 +46,6 @@ namespace GameWorldLibrary
         #endregion
 
         #region Private Methods
-        private static string GetCharacterChoice(string[] options)
-        {
-            return Input.Option(options);
-        }
-
         private static string GetCharacterName(string playerName)
         {
             int maxChars = 12;
