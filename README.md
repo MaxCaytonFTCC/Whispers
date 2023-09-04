@@ -2,6 +2,8 @@
 # Master Branch
 
 New Beginnings Assignment Contributions:
+
+
   Max C: Provided Base Project & Resolved GitHub Conflicts
 
  
