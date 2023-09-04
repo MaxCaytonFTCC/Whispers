@@ -1,0 +1,20 @@
+C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\ConsoleUI\bin\Debug\ConsoleUI.exe
+C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\ConsoleUI\bin\Debug\ConsoleUI.pdb
+C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\ConsoleUI\bin\Debug\GameWorldLibrary.dll
+C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\ConsoleUI\bin\Debug\GameWorldLibrary.pdb
+C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\ConsoleUI\obj\Debug\ConsoleUI.csproj.AssemblyReference.cache
+C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\ConsoleUI\obj\Debug\ConsoleUI.csproj.CoreCompileInputs.cache
+C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\ConsoleUI\obj\Debug\ConsoleUI.exe
+C:\Users\kmccr\OneDrive\Desktop\Work\Semester 3\CSC-253\Whispers-clone\ConsoleUI\obj\Debug\ConsoleUI.pdb
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\obj\Debug\ConsoleUI.csproj.AssemblyReference.cache
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\obj\Debug\ConsoleUI.csproj.CoreCompileInputs.cache
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\obj\Debug\ConsoleUI.exe
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\obj\Debug\ConsoleUI.pdb
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\ConsoleUI.exe
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\ConsoleUI.pdb
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\GameWorldLibrary.dll
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\GameWorldLibrary.pdb
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
