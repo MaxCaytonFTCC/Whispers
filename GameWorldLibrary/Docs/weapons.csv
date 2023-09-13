@@ -1,6 +1,11 @@
 ID,Name,Description,Damage Type,Price,Damage
-0,Initiate's Waraxe,"A heavy battle-worn double-bladed axe.",Slashing,1,5
-1,Novice's Bone Splinter,"A skeleton's disembodied index finger imbued with magic and usable as a wand.",Necrotic,1,5
+0,Initiate's Waraxe,A heavy battle-worn double-bladed axe.,Slashing,1,5
+1,Novice's Bone Splinter,A skeleton's disembodied index finger imbued with magic and usable as a wand.,Necrotic,1,5
 2,Thief's Rusty Knives,A set of knives that have seen better days.,Piercing,1,5
-3,Flameseer's Flickering Wartorch,"An ancient weapon of elemental lords bereft of all but a spark.",Fire,1,5
+3,Flameseer's Flickering Wartorch,An ancient weapon of elemental lords bereft of all but a spark.,Fire,1,5
 4,Obsidian Glaive,A brutal weapon fit for a warlord with a volcanic temper.,Slashing,100,30
+5,Crossbow,A heavy wooden crossbow with some bolts.,Piercing,30,25
+6,Rusty Shovel,This shovel has seen better days but can still be used to kill things,Bludgeoning,5,8
+7,Tree Branch,Better than nothing,Slashing,1,2
+8,Lumber Axe,This axe will be cutting something far more sinister than trees,Slashing,10,10
+9,Gibbering Skull,This disimbodied skull speaks in tongues of forbidden magic. It's best not to try and understand what it's saying.,Psychic,50,45

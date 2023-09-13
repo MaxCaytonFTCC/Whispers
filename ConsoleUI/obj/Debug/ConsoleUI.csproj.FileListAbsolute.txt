@@ -18,3 +18,13 @@ C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\ConsoleUI.pdb
 C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\GameWorldLibrary.dll
 C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\GameWorldLibrary.pdb
 C:\Users\kmccr\source\repos\Whispers\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+C:\Users\super\OneDrive\Desktop\Whispers-cm-branch\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+C:\Users\super\OneDrive\Desktop\Whispers-cm-branch\ConsoleUI\bin\Debug\ConsoleUI.exe
+C:\Users\super\OneDrive\Desktop\Whispers-cm-branch\ConsoleUI\bin\Debug\ConsoleUI.pdb
+C:\Users\super\OneDrive\Desktop\Whispers-cm-branch\ConsoleUI\bin\Debug\GameWorldLibrary.dll
+C:\Users\super\OneDrive\Desktop\Whispers-cm-branch\ConsoleUI\bin\Debug\GameWorldLibrary.pdb
+C:\Users\super\OneDrive\Desktop\Whispers-cm-branch\ConsoleUI\obj\Debug\ConsoleUI.csproj.AssemblyReference.cache
+C:\Users\super\OneDrive\Desktop\Whispers-cm-branch\ConsoleUI\obj\Debug\ConsoleUI.csproj.CoreCompileInputs.cache
+C:\Users\super\OneDrive\Desktop\Whispers-cm-branch\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+C:\Users\super\OneDrive\Desktop\Whispers-cm-branch\ConsoleUI\obj\Debug\ConsoleUI.exe
+C:\Users\super\OneDrive\Desktop\Whispers-cm-branch\ConsoleUI\obj\Debug\ConsoleUI.pdb
