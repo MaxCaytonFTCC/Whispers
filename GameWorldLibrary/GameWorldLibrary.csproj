@@ -65,6 +65,7 @@
     <Compile Include="Models\Treasure.cs" />
     <Compile Include="Models\Weapon.cs" />
     <Compile Include="Global\World.cs" />
+    <Compile Include="TextScrambler.cs" />
     <Compile Include="UI\Command.cs" />
     <Compile Include="UI\Input.cs" />
     <Compile Include="UI\Menu.cs" />
