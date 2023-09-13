@@ -1,8 +1,8 @@
 ﻿/**
-* 5/5/2023
+* 9/13/2023
 * CSC 153
 * Group 3
-* This program plays the game Whispers
+* This program plays the game Whispers (cm_branch)
 */
 
 using System;
