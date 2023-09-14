@@ -69,6 +69,7 @@
     <Compile Include="UI\Command.cs" />
     <Compile Include="UI\Input.cs" />
     <Compile Include="UI\Menu.cs" />
+    <Compile Include="EquipmentSlots.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

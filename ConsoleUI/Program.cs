@@ -28,7 +28,9 @@ namespace ConsoleUI
             // Create Character
             World.player = PlayerMaker.CreateNewPlayer();
             //World.player = new Player();
-            LoadGame.InitializeStartingRoom(World.player);            
+            LoadGame.InitializeStartingRoom(World.player);
+
+            Console.ReadKey();
 
             // Game Loop
             do
