@@ -31,56 +31,56 @@ namespace GameWorldLibrary
             if (Help.Keywords.Contains(input[0]))
             {
                 // Display Help
-                Help.Activate();
+                Help.Do(World.player, input);
             }
 
             // If the Quit action is called
             if (Quit.Keywords.Contains(input[0]))
             {
                 // Quit the game
-                Quit.Activate();
+                Quit.Do(World.player, input);
             }
 
             // If the Look action is called
             if (Look.Keywords.Contains(input[0]))
             {
                 // Look at the Objects in the Room
-                Look.Activate(World.player);
+                Look.Do(World.player, input);
             }
 
             // If the Move action is called
             if (Move.Keywords.Contains(input[0]))
             {
                 // Move the player
-                Move.Activate(World.player);
+                Move.Do(World.player, input);
             }
 
             // If the Pick Up action is called
             if (PickUp.Keywords.Contains(input[0]))
             {
                 // Pick Up and object
-                //PickUp.Activate(World.player);
+                //PickUp.Do(World.player, input);
             }
 
             // If the Drop action is called
             if (Drop.Keywords.Contains(input[0]))
             {
                 // Drop an object
-                //Drop.Activate(World.player);
+                //Drop.Do(World.player, input);
             }
 
             // If the Use action is called
             if (Use.Keywords.Contains(input[0]))
             {
                 // Use inventory
-                Use.Activate(World.player);
+                Use.Do(World.player, input);
             }
 
             // If the Attack action is called
             if (Attack.Keywords.Contains(input[0]))
             {
                 // Attack a mob
-                //Attack.Activate(World.player);
+                //Attack.Do(World.player, input);
             }
         }
     }

@@ -10,3 +10,9 @@ C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary
 C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.pdb
 C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\bin\Debug\GameWorldLibrary.dll
 C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\bin\Debug\GameWorldLibrary.pdb
+C:\Users\kmccr\Source\Repos\MaxCaytonFTCC\Whispers\GameWorldLibrary\bin\Debug\GameWorldLibrary.dll
+C:\Users\kmccr\Source\Repos\MaxCaytonFTCC\Whispers\GameWorldLibrary\bin\Debug\GameWorldLibrary.pdb
+C:\Users\kmccr\Source\Repos\MaxCaytonFTCC\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.AssemblyReference.cache
+C:\Users\kmccr\Source\Repos\MaxCaytonFTCC\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CoreCompileInputs.cache
+C:\Users\kmccr\Source\Repos\MaxCaytonFTCC\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.dll
+C:\Users\kmccr\Source\Repos\MaxCaytonFTCC\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.pdb
