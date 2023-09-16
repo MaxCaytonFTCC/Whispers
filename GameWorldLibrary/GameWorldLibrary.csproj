@@ -71,12 +71,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Docs\items.csv" />
-    <None Include="Docs\mobs.csv" />
-    <None Include="Docs\potions.csv" />
-    <None Include="Docs\rooms.csv" />
-    <None Include="Docs\treasures.csv" />
-    <None Include="Docs\weapons.csv" />
+    <None Include="Docs\csv\items.csv" />
+    <None Include="Docs\csv\mobs.csv" />
+    <None Include="Docs\csv\potions.csv" />
+    <None Include="Docs\csv\rooms.csv" />
+    <None Include="Docs\csv\roomtest.csv" />
+    <None Include="Docs\csv\treasures.csv" />
+    <None Include="Docs\csv\weapons.csv" />
+    <None Include="Docs\xls\rooms.xls" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\Players\PLACEHOLDER.txt" />

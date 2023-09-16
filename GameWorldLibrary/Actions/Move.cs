@@ -104,7 +104,7 @@ namespace GameWorldLibrary
             try
             {
                 // Get the new room from the index
-                Room newRoom = World.rooms[int.Parse(World.rooms[user.Location].Exits[index])]; // Redo exit code so this isn't like this
+                Room newRoom = World.rooms[World.rooms[user.Location].Exits[index]];
 
                 // Add player to the new Room
                 newRoom.RoomPlayers.Add(user);
