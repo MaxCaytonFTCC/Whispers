@@ -9,13 +9,9 @@ namespace GameWorldLibrary
 {
     class MobClass2
     {
-        ///MobType mobType = new MobType();
-        //mobType.EnemyType("Bear", "Looters", "Fungal Mob", "Patrol Troops", "Wild Dogs");
-        //mobType.MobHP(100, 50, 80, 75, 0);
-
         public class MobType
         {
-            //The enemy type (enemy class)
+            //The enemy type (enemy class), Regular enemy type
             private string _wildbear = "Bear";
             private string _looters = "Looters";
             private string _fungalmob = "Fungal Mob";
@@ -26,6 +22,31 @@ namespace GameWorldLibrary
             public string FungalMob { get { return _fungalmob; } set { _fungalmob = value; } }
             public string Patroltroops { get { return _patroltroops; } set { _patroltroops = value; } }
             public string WildDogs { get { return _wilddogs; } set { _wilddogs = value; } }
+
+            //New Enemy Mobs, Elite enemy type
+            private string _seekers = "Seekers";
+            private string _soulreaver = "Soul Reaver";
+            private string _pathfinder = "Pathfinder";
+            private string _nighthunter = "Night Hunter";
+            private string _summoner = "Summoner";
+            public string Seekers { get { return _seekers; } set { _seekers = value; } }
+            public string SoulReaver { get { return _soulreaver; } set { _soulreaver = value; } }
+            public string PathFinder { get { return _pathfinder; } set { _pathfinder = value; } }
+            public string NightHunter { get { return _nighthunter; } set { _nighthunter = value; } }
+            public string Summoner { get { return _summoner; } set { _summoner = value; } }
+
+            //New Enemy HP points
+            private int seekerHP = 100;
+            private int soulreaverHP = 150;
+            private int pathfinderHP = 115;
+            private int nighthunterHP = 120;
+            private int summonerHP = 200;
+            public int SeekerHP { get { return seekerHP; } set { seekerHP = value; } }
+            public int SoulReaverHP { get { return soulreaverHP; } set { soulreaverHP = value; } }
+            public int PathFinderHP { get { return pathfinderHP; } set { pathfinderHP = value; } }
+            public int NightHunterHP { get { return nighthunterHP; } set { nighthunterHP = value; } }
+            public int SummonerHP { get { return summonerHP; } set { summonerHP = value; } }
+
 
             //The enemy Health at the start
             private int fullHP = 100;
@@ -106,8 +127,24 @@ namespace GameWorldLibrary
                         Console.WriteLine("A pack of Wild Dogs have appeared!");
                         break;
                 }
-                //return enemy;
-            }
+            } 
+
+            //TODO: Fix SummonerClass To call certain KEYS from the dictionary
+            //public void SummonerClass()
+            //{
+            //    Dictionary<string, int> enemyType = new Dictionary<string, int>()
+            //    {
+            //        { "Wild Bear" , 150 }, {"Looters", 100 }, { "Fungal Mob", 115 },
+            //        { "Patrol Troops", 125 }, { "Wild Dogs", 130 }, { "Seeker", 100 },
+            //        { "Soul Reaver", 150 }, { "Path Finder", 115 }, { "Night Hunter", 120 }
+            //    };
+
+            //    foreach (var item in enemyType.Keys)
+            //    {
+            //        Console.WriteLine($"{item} , {enemyType[item]}");
+            //    }
+            //}
+
         }
     }
 }

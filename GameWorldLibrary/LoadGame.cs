@@ -26,7 +26,7 @@ namespace GameWorldLibrary
 
             int index = 0;
 
-            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/weapons.csv"))
+            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/csv/weapons.csv"))
             {
                 while (!reader.EndOfStream)
                 {
@@ -50,7 +50,7 @@ namespace GameWorldLibrary
 
             int index = 0;
 
-            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/items.csv"))
+            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/csv/items.csv"))
             {
                 while (!reader.EndOfStream)
                 {
@@ -74,7 +74,7 @@ namespace GameWorldLibrary
 
             int index = 0;
 
-            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/treasures.csv"))
+            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/csv/treasures.csv"))
             {
                 while (!reader.EndOfStream)
                 {
@@ -98,7 +98,7 @@ namespace GameWorldLibrary
 
             int index = 0;
 
-            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/potions.csv"))
+            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/csv/potions.csv"))
             {
                 while (!reader.EndOfStream)
                 {
@@ -121,7 +121,7 @@ namespace GameWorldLibrary
         {
             int index = 0;
 
-            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/mobs.csv"))
+            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/csv/mobs.csv"))
             {
                 while (!reader.EndOfStream)
                 {
@@ -146,7 +146,7 @@ namespace GameWorldLibrary
 
             int index = 0;
 
-            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/rooms.csv"))
+            using (StreamReader reader = File.OpenText(@"../../../GameWorldLibrary/Docs/csv/roomtest.csv"))
             {
                 while (!reader.EndOfStream)
                 {
@@ -154,7 +154,27 @@ namespace GameWorldLibrary
 
                     if (index != 0)
                     {
-                        World.rooms.Add(new Room(int.Parse(tokens[0]),tokens[1], tokens[2],Room.GetExits(tokens[3]),Room.GetItems(tokens[4]),Room.GetMobs(tokens[5]),Room.GetWeapons(tokens[6]),Room.GetTreasure(tokens[7]),Room.GetPotion(tokens[8]),new List<Player>()));
+                        //World.rooms.Add(new Room(int.Parse(tokens[0]),tokens[1], tokens[2],Room.GetSubArray(tokens[3]),Room.GetItems(tokens[4]),Room.GetMobs(tokens[5]),Room.GetWeapons(tokens[6]),Room.GetTreasures(tokens[7]),Room.GetPotions(tokens[8]),new List<Player>()));
+                        
+                        // Construct Room
+                        Room room = new Room();
+
+                        // Add basic info
+                        room.ID = int.Parse(tokens[0]);
+                        room.Name = tokens[1];
+                        room.Description = tokens[2];
+
+                        // Move GetObject functions into their own class at some point
+                        room.Exits = Room.GetSubArray(tokens[3]);
+                        room.RoomItems = Room.GetItems(tokens[4]);
+                        room.RoomPotions = Room.GetPotions(tokens[5]);
+                        room.RoomTreasures = Room.GetTreasures(tokens[6]);
+                        room.RoomWeapons = Room.GetWeapons(tokens[7]);
+                        room.RoomMobs = Room.GetMobs(tokens[8]);
+                        room.RoomPlayers = new List<Player>();
+
+                        // Add the room
+                        World.rooms.Add(room);
                     }
 
                     else
