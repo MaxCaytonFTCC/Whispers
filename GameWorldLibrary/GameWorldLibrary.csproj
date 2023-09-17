@@ -79,6 +79,8 @@
     <None Include="Docs\weapons.csv" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Docs\Mobs\MobInfo.txt" />
+    <Content Include="Docs\Mobs\SummonerEnemyCall.txt" />
     <Content Include="Docs\Players\PLACEHOLDER.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
