@@ -200,60 +200,59 @@ namespace GameWorldLibrary
             }
 
             return itemList;
-
         }
 
         public static List<Mob> GetMobs(string mobs)
         {
-            string[] tokens = mobs.Split('_');
+            int[] mob_tokens = GetSubArray(mobs);
+
             List<Mob> mobList = new List<Mob>();
 
-            if (tokens[0] == "-1")
+            if (mob_tokens[0] == -1)
             {
                 return mobList;
             }
 
-            for (int i = 0; i < tokens.Length; i++)
+            for (int i = 0; i < mob_tokens.Length; i++)
             {
-                mobList.Add(World.mobs[int.Parse(tokens[i])]);
+                mobList.Add(World.mobs[mob_tokens[i]]);
             }
 
             return mobList;
-
         }
 
         public static List<Weapon> GetWeapons(string weapons)
         {
-            string[] tokens = weapons.Split('_');
+            int[] weapon_tokens = GetSubArray(weapons);
+
             List<Weapon> weaponList = new List<Weapon>();
 
-            if (tokens[0] == "-1")
+            if (weapon_tokens[0] == -1)
             {
                 return weaponList;
             }
 
-            for (int i = 0; i < tokens.Length; i++)
+            for (int i = 0; i < weapon_tokens.Length; i++)
             {
-                weaponList.Add(World.weapons[int.Parse(tokens[i])]);
+                weaponList.Add(World.weapons[weapon_tokens[i]]);
             }
 
             return weaponList;
-
         }
 
         public static List<Treasure> GetTreasures(string treasures)
         {
-            string[] tokens = treasures.Split('_');
+            int[] treasure_tokens = GetSubArray(treasures);
             List<Treasure> treasureList = new List<Treasure>();
 
-            if (tokens[0] == "-1")
+            if (treasure_tokens[0] == -1)
             {
                 return treasureList;
             }
 
-            for (int i = 0; i < tokens.Length; i++)
+            for (int i = 0; i < treasure_tokens.Length; i++)
             {
-                treasureList.Add(World.treasures[int.Parse(tokens[i])]);
+                treasureList.Add(World.treasures[treasure_tokens[i]]);
             }
 
             return treasureList;
@@ -262,17 +261,17 @@ namespace GameWorldLibrary
 
         public static List<Potion> GetPotions(string potions)
         {
-            string[] tokens = potions.Split('_');
+            int[] potion_tokens = GetSubArray(potions);
             List<Potion> potionList = new List<Potion>();
 
-            if (tokens[0] == "-1")
+            if (potion_tokens[0] == -1)
             {
                 return potionList;
             }
 
-            for (int i = 0; i < tokens.Length; i++)
+            for (int i = 0; i < potion_tokens.Length; i++)
             {
-                potionList.Add(World.potions[int.Parse(tokens[i])]);
+                potionList.Add(World.potions[potion_tokens[i]]);
             }
 
             return potionList;

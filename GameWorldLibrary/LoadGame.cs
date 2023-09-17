@@ -167,10 +167,10 @@ namespace GameWorldLibrary
                         // Move GetObject functions into their own class at some point
                         room.Exits = Room.GetSubArray(tokens[3]);
                         room.RoomItems = Room.GetItems(tokens[4]);
-                        //room.RoomPotions = Room.GetPotions(tokens[5]);
-                        //room.RoomTreasures = Room.GetTreasures(tokens[6]);
-                        //room.RoomWeapons = Room.GetWeapons(tokens[7]);
-                        //room.RoomMobs = Room.GetMobs(tokens[8]);
+                        room.RoomPotions = Room.GetPotions(tokens[5]);
+                        room.RoomTreasures = Room.GetTreasures(tokens[6]);
+                        room.RoomWeapons = Room.GetWeapons(tokens[7]);
+                        room.RoomMobs = Room.GetMobs(tokens[8]);
                         room.RoomPlayers = new List<Player>();
 
                         // Add the room
