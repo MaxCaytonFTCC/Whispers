@@ -127,23 +127,88 @@ namespace GameWorldLibrary
                         Console.WriteLine("A pack of Wild Dogs have appeared!");
                         break;
                 }
-            } 
+            }
 
-            //TODO: Fix SummonerClass To call certain KEYS from the dictionary
-            //public void SummonerClass()
-            //{
-            //    Dictionary<string, int> enemyType = new Dictionary<string, int>()
-            //    {
-            //        { "Wild Bear" , 150 }, {"Looters", 100 }, { "Fungal Mob", 115 },
-            //        { "Patrol Troops", 125 }, { "Wild Dogs", 130 }, { "Seeker", 100 },
-            //        { "Soul Reaver", 150 }, { "Path Finder", 115 }, { "Night Hunter", 120 }
-            //    };
+            public static class Combat
+            {
+                //Defined the Damage / Attack
+                public enum DamageType
+                {
+                    Claw,
+                    Molotov,
+                    FireBurst,
+                    Crossbow,
+                    Bite,
 
-            //    foreach (var item in enemyType.Keys)
-            //    {
-            //        Console.WriteLine($"{item} , {enemyType[item]}");
-            //    }
-            //}
+                }
+
+                public class Weapon
+                {
+                    public string Name { get; set; }
+                    public int Damage { get; set; }
+                    public DamageType DamageType { get; set; }
+
+                    public Weapon(string name, int damage, DamageType damageType)
+                    {
+                        Name = name;
+                        Damage = damage;
+                        DamageType = damageType;
+                    }
+                }
+                public class Battle
+                {
+                    public string Name { get; set; }
+                    public int Health { get; private set; }
+                    public Weapon EquippedWeapon { get; private set; }
+
+                    public Battle(string name, int health)
+                    {
+                        Name = name;
+                        Health = health;
+                    }
+
+                    public void EquipWeapon(Weapon weapon)
+                    {
+                        EquippedWeapon = weapon;
+                    }
+                    private int CalculateDamage(int baseDamage, DamageType damageType)
+                    {
+                        switch (damageType)
+                        {
+                            case DamageType.Claw:
+                                return baseDamage;
+                            case DamageType.Molotov:
+                                return baseDamage + 2;
+                            case DamageType.FireBurst:
+                                return baseDamage * 2;
+                            case DamageType.Crossbow:
+                                return baseDamage;
+                            default:
+                                return baseDamage;
+                        }
+                    }
+                    public void Damage(int amount, DamageType damageType)
+                    {
+                        int damageCalc = CalculateDamage(amount, damageType);
+                        Health -= amount;
+                        Console.WriteLine($"Hit {Name}! Lost amount: {damageCalc} {damageType}");
+                    }
+                    public void Attack(Battle target)
+                    {
+                        if (EquippedWeapon == null)
+                        {
+                            Console.WriteLine($"{Name} attempts to attack but is unarmed.");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{Name} attacks {target.Name} with {EquippedWeapon.Name}!");
+
+                            // Deal damage based on equipped weapon.
+                            target.Damage(EquippedWeapon.Damage, EquippedWeapon.DamageType);
+                        }
+                    }
+                }
+            }
 
         }
     }
