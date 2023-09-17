@@ -14,6 +14,26 @@ namespace GameWorldLibrary
         public static string[] Options { get; } = { "Items", "Potions", "Treasures", "Weapons"};    // Action Choices
         #endregion
         #region Methods
+        public static void Do(Player user, string[] input)
+        {
+            // Check how many tokens a user has inputted
+            switch (input.Length)
+            {
+                // User entered 3 words
+                case 3:
+                    // No command for 3 words YET
+
+                // User entered 2 words
+                case 2:
+                    Activate(user, input[1]);
+                    break;
+
+                // User entered 1 word
+                default:
+                    Activate(user);
+                    break;
+            }
+        }
         #region Command Methods
         public static void Activate(Player user)
         {
@@ -38,7 +58,6 @@ namespace GameWorldLibrary
                 case "items":
                     // Get Item selection
                     Activate(user, Menu.Run(user.ItemInventory.ToArray(), true));
-
                     // Break
                     break;
 
@@ -46,7 +65,6 @@ namespace GameWorldLibrary
                 case "potions":
                     // Get Potion selection
                     Activate(user, Menu.Run(user.PotionInventory.ToArray(), true));
-
                     // Break
                     break;
 
@@ -54,7 +72,6 @@ namespace GameWorldLibrary
                 case "treasures":
                     // Get Treasure selection
                     Activate(user, Menu.Run(user.TreasureInventory.ToArray(), true));
-
                     // Break
                     break;
 
@@ -62,7 +79,6 @@ namespace GameWorldLibrary
                 case "weapons":
                     // Get Weapon selection
                     Activate(user, Menu.Run(user.WeaponInventory.ToArray(), true));
-
                     // Break
                     break;
 

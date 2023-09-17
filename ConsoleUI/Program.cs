@@ -1,8 +1,9 @@
 ﻿/**
-* 5/5/2023
-* CSC 153
+* 9/13/2023
+* CSC 253
 * Group 3
-* This program plays the game Whispers
+* Group Members: Max Cayton, Kevin McCroary, Joseph McCollum
+* This program plays the game "Whispers"
 */
 
 using System;
@@ -20,7 +21,7 @@ namespace ConsoleUI
         static void Main(string[] args)
         {            
             LoadGame.RunLoad();
-
+           
             // Welcome the User
             Display.DisplayWelcomeInstructions();
 
@@ -28,6 +29,8 @@ namespace ConsoleUI
             World.player = PlayerMaker.CreateNewPlayer();
             //World.player = new Player();
             LoadGame.InitializeStartingRoom(World.player);
+
+            Console.ReadKey();
 
             // Game Loop
             do

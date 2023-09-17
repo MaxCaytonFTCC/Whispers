@@ -17,12 +17,12 @@ namespace GameWorldLibrary
         public int HP { get; set; }                             // Health Points
         public int AC { get; set; }                             // im dumb i cant remember what this means
         public int Location { get; set; }                       // Location
-        //public Room Location { get; set; }                    // Location (Will replace int Location)
         public List<Item> ItemInventory { get; set; } = new List<Item>();               // Items
         public List<Potion> PotionInventory { get; set; } = new List<Potion>();         // Potions
         public List<Weapon> WeaponInventory { get; set; } = new List<Weapon>();         // Weapons
         public List<Treasure> TreasureInventory { get; set; } = new List<Treasure>();   // Treasures
         public List<string> Quests { get; set; }                // Quests
+        public EquipmentSlots PlayerEquipmentSlots { get; set; } = new EquipmentSlots(new Item(0,"Helm of Domination",9000,false,false,"Helm of The Lich King"), new Item(), new Item(), new Item());
         #endregion
         #region Constructors
         // Default Constructor
