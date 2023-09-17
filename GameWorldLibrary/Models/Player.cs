@@ -17,7 +17,6 @@ namespace GameWorldLibrary
         public int HP { get; set; }                             // Health Points
         public int AC { get; set; }                             // im dumb i cant remember what this means
         public int Location { get; set; }                       // Location
-        //public Room Location { get; set; }                    // Location (Will replace int Location)
         public List<Item> ItemInventory { get; set; } = new List<Item>();               // Items
         public List<Potion> PotionInventory { get; set; } = new List<Potion>();         // Potions
         public List<Weapon> WeaponInventory { get; set; } = new List<Weapon>();         // Weapons

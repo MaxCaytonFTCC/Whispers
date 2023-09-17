@@ -12,20 +12,19 @@ namespace GameWorldLibrary
         public int ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string[] Exits { get; set; }
-        // public int[] Exits { get; set; }
+        public int[] Exits { get; set; }
         public List<Item> RoomItems { get; set; }
-        public List<Mob> RoomMobs { get; set; }
         public List<Weapon> RoomWeapons { get; set; }
         public List<Treasure> RoomTreasures { get; set; }
         public List<Potion> RoomPotions { get; set; }
+        public List<Mob> RoomMobs { get; set; }
         public List<Player> RoomPlayers { get; set; }
         #endregion
         #region Constructors
         // Default Constructor
         public Room() { }
         // Constructor
-        public Room(int id, string name, string description, string[] exits, List<Item> roomItems, List<Mob> roomMobs, List<Weapon> roomWeapons, List<Treasure> roomTreasures, List<Potion> roomPotions, List<Player> roomPlayers)
+        public Room(int id, string name, string description, int[] exits, List<Item> roomItems, List<Mob> roomMobs, List<Weapon> roomWeapons, List<Treasure> roomTreasures, List<Potion> roomPotions, List<Player> roomPlayers)
         {
 
             ID = id;
@@ -163,101 +162,116 @@ namespace GameWorldLibrary
             }
         }
         #endregion
-        public static string[] GetExits(string exits)
+        // Split into separate Class
+        public static int[] GetSubArray(string array_string)
         {
-            string[] tokens = exits.Split('_');
-            return tokens;
+            // Split string into tokens
+            string[] tokens = array_string.Split('_');
+
+            // Create int array
+            int[] int_array = new int[tokens.Length];
+
+            // For every token
+            for (int i = 0; i < tokens.Length; i++)
+            {
+                // If token entry is empty, replace with a -1
+                int_array[i] = (tokens[i] != "") ? int.Parse(tokens[i]): -1;
+            }
+
+            // Return int array
+            return int_array;
         }
 
         public static List<Item> GetItems(string items)
         {
-            string[] tokens = items.Split('_');
+            int[] item_tokens = GetSubArray(items);
+
             List<Item> itemList = new List<Item>();
 
-           if (tokens[0] == "-1")
-           {
-                return itemList;
-           }
-
-            for (int i = 0; i < tokens.Length; i++)
+            // Cut item list entries if first entry is -1
+            if (item_tokens[0] == -1)
             {
-                itemList.Add(World.items[int.Parse(tokens[i])]);
+                return itemList;
+            }
+
+            for (int i = 0; i < item_tokens.Length; i++)
+            {
+                itemList.Add(World.items[item_tokens[i]]);
             }
 
             return itemList;
-
         }
 
         public static List<Mob> GetMobs(string mobs)
         {
-            string[] tokens = mobs.Split('_');
+            int[] mob_tokens = GetSubArray(mobs);
+
             List<Mob> mobList = new List<Mob>();
 
-            if (tokens[0] == "-1")
+            if (mob_tokens[0] == -1)
             {
                 return mobList;
             }
 
-            for (int i = 0; i < tokens.Length; i++)
+            for (int i = 0; i < mob_tokens.Length; i++)
             {
-                mobList.Add(World.mobs[int.Parse(tokens[i])]);
+                mobList.Add(World.mobs[mob_tokens[i]]);
             }
 
             return mobList;
-
         }
 
         public static List<Weapon> GetWeapons(string weapons)
         {
-            string[] tokens = weapons.Split('_');
+            int[] weapon_tokens = GetSubArray(weapons);
+
             List<Weapon> weaponList = new List<Weapon>();
 
-            if (tokens[0] == "-1")
+            if (weapon_tokens[0] == -1)
             {
                 return weaponList;
             }
 
-            for (int i = 0; i < tokens.Length; i++)
+            for (int i = 0; i < weapon_tokens.Length; i++)
             {
-                weaponList.Add(World.weapons[int.Parse(tokens[i])]);
+                weaponList.Add(World.weapons[weapon_tokens[i]]);
             }
 
             return weaponList;
-
         }
 
-        public static List<Treasure> GetTreasure(string treasures)
+        public static List<Treasure> GetTreasures(string treasures)
         {
-            string[] tokens = treasures.Split('_');
+            int[] treasure_tokens = GetSubArray(treasures);
             List<Treasure> treasureList = new List<Treasure>();
 
-            if (tokens[0] == "-1")
+            if (treasure_tokens[0] == -1)
             {
                 return treasureList;
             }
 
-            for (int i = 0; i < tokens.Length; i++)
+            for (int i = 0; i < treasure_tokens.Length; i++)
             {
-                treasureList.Add(World.treasures[int.Parse(tokens[i])]);
+                treasureList.Add(World.treasures[treasure_tokens[i]]);
             }
 
             return treasureList;
 
         }
 
-        public static List<Potion> GetPotion(string potions)
+        public static List<Potion> GetPotions(string potions)
         {
-            string[] tokens = potions.Split('_');
+            int[] potion_tokens = GetSubArray(potions);
             List<Potion> potionList = new List<Potion>();
 
-            if (tokens[0] == "-1")
+            if (potion_tokens[0] == -1)
             {
                 return potionList;
             }
 
-            for (int i = 0; i < tokens.Length; i++)
+            for (int i = 0; i < potion_tokens.Length; i++)
             {
-                potionList.Add(World.potions[int.Parse(tokens[i])]);
+                potionList.Add(World.potions[potion_tokens[i]]);
             }
 
             return potionList;

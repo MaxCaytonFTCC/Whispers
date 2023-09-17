@@ -44,7 +44,7 @@ namespace GameWorldLibrary
 
             for (int i = 0; i < World.rooms[location].Exits.Length; i++)
             {
-                Console.WriteLine((i + 1).ToString() + ". " + World.rooms[int.Parse(World.rooms[location].Exits[i])].Name);
+                Console.WriteLine((i + 1).ToString() + ". " + World.rooms[World.rooms[location].Exits[i]].Name);
             }
 
             Console.WriteLine("\nType \"Move [Exit Number]\" to move to that room.");
