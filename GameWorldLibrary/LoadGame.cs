@@ -190,5 +190,29 @@ namespace GameWorldLibrary
         {
             World.rooms[player.Location].RoomPlayers.Add(player);
         }
+
+        // Method for copying Mob Objects From List to List
+        public static void CopyMobToList(ref List<Mob> preivousList, Mob targetMob, ref List<Mob> targetList, bool remove = true)
+        {
+            // Remove from previous list (if enabled)
+            if (remove == true)
+            {
+                int listIndex = 0;
+                foreach (var mob in preivousList)
+                {
+                    if (mob == targetMob)
+                    {
+                        preivousList.RemoveAt(listIndex);
+                        break;
+                    }
+                    listIndex++;
+                }
+            }
+
+            // Add to target List
+            targetList.Add(targetMob);
+
+        }
+
     }
 }

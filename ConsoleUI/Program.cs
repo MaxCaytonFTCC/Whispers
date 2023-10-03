@@ -19,9 +19,9 @@ namespace ConsoleUI
     class Program
     {
         static void Main(string[] args)
-        {            
+        {           
             LoadGame.RunLoad();
-           
+
             // Welcome the User
             Display.DisplayWelcomeInstructions();
 
