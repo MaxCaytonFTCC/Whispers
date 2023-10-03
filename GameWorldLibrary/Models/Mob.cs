@@ -17,7 +17,7 @@ namespace GameWorldLibrary
         public int AC { get; set; }
         public string Weapon { get; set; }
         public string Description { get; set; }
-        public List<IUsable> Inventory { get; set; } = new List<IUsable>();
+        public List<Usable> Inventory { get; set; } = new List<Usable>();
         #endregion
         #region Constructors
         // Default Constructor

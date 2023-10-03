@@ -17,7 +17,7 @@ namespace GameWorldLibrary
         public int HP { get; set; }                             // Health Points
         public int AC { get; set; }                             // im dumb i cant remember what this means
         public int Location { get; set; }                       // Location
-        public List<IUsable> Inventory { get; set; } = new List<IUsable>();              // Usables
+        public List<Usable> Inventory { get; set; } = new List<Usable>();              // Usables
         public List<string> Quests { get; set; }                // Quests
         public EquipmentSlots PlayerEquipmentSlots { get; set; } = new EquipmentSlots(new Item(0,"Helm of Domination",9000,false,false,"Helm of The Lich King"), new Item(), new Item(), new Item());
         #endregion

@@ -21,7 +21,7 @@ namespace GameWorldLibrary
         string Name { get; set; }           // Usable Name
         int Price { get; set; }             // Usable Price
         string Description { get; set; }    // Usable Description
-        UsableType Type { get; }            // Usable Type
+        UsableType Type { get; set; }       // Usable Type
 
         void Info();                        // Show info for Usable
         void InfoMore();                    // Show more info for Usable

@@ -13,7 +13,7 @@ namespace GameWorldLibrary
         public string Name { get; set; }
         public string Description { get; set; }
         public int[] Exits { get; set; }
-        public List<IUsable> RoomUsables { get; set; } = new List<IUsable>();
+        public List<Usable> RoomUsables { get; set; } = new List<Usable>();
         public List<Mob> RoomMobs { get; set; }
         public List<Player> RoomPlayers { get; set; }
         #endregion
@@ -48,7 +48,7 @@ namespace GameWorldLibrary
         public void InfoItems()         // Show Item Names and Descriptions
         {
             // Get Items list
-            List<IUsable> items = GetList.Usable(RoomUsables, UsableType.Item);
+            List<Usable> items = GetList.Usable(RoomUsables, UsableType.Item);
 
             // If there are no Items in the Room
             if (items.Count == 0)
@@ -71,7 +71,7 @@ namespace GameWorldLibrary
         public void InfoWeapons()       // Show Weapon Names and Descriptions
         {
             // Get Weapons list
-            List<IUsable> weapons = GetList.Usable(RoomUsables, UsableType.Item);
+            List<Usable> weapons = GetList.Usable(RoomUsables, UsableType.Item);
 
             // If there are no Weapons in the Room
             if (weapons.Count == 0)
@@ -93,7 +93,7 @@ namespace GameWorldLibrary
         public void InfoTreasures()     // Show Treasure Names and Descriptions
         {
             // Get Treasures list
-            List<IUsable> treasures = GetList.Usable(RoomUsables, UsableType.Item);
+            List<Usable> treasures = GetList.Usable(RoomUsables, UsableType.Item);
 
             // If there are no Treasures in the Room
             if (treasures.Count == 0)
@@ -115,7 +115,7 @@ namespace GameWorldLibrary
         public void InfoPotions()       // Show Potion Names and Descriptions
         {
             // Get Potions list
-            List<IUsable> potions = GetList.Usable(RoomUsables, UsableType.Item);
+            List<Usable> potions = GetList.Usable(RoomUsables, UsableType.Item);
 
             // If there are no Potions in the Room
             if (potions.Count == 0)
