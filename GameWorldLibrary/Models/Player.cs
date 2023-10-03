@@ -19,6 +19,7 @@ namespace GameWorldLibrary
         public int Location { get; set; }                       // Location
         public List<IUsable> Inventory { get; set; } = new List<IUsable>();              // Usables
         public List<string> Quests { get; set; }                // Quests
+        public EquipmentSlots PlayerEquipmentSlots { get; set; } = new EquipmentSlots(new Item(0,"Helm of Domination",9000,false,false,"Helm of The Lich King"), new Item(), new Item(), new Item());
         #endregion
         #region Constructors
         // Default Constructor
