@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Weapon
+    public class Weapon : IUsable
     {
         #region Properties
         public int ID { get; set; }
@@ -15,6 +15,7 @@ namespace GameWorldLibrary
         public string DamageType { get; set; }
         public int Damage { get; set; }
         public int Price { get; set; }
+        public UsableType Type { get; } = UsableType.Weapon;
         #endregion
         #region Constructors
         // Default Constructor

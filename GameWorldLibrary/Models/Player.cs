@@ -17,10 +17,7 @@ namespace GameWorldLibrary
         public int HP { get; set; }                             // Health Points
         public int AC { get; set; }                             // im dumb i cant remember what this means
         public int Location { get; set; }                       // Location
-        public List<Item> ItemInventory { get; set; } = new List<Item>();               // Items
-        public List<Potion> PotionInventory { get; set; } = new List<Potion>();         // Potions
-        public List<Weapon> WeaponInventory { get; set; } = new List<Weapon>();         // Weapons
-        public List<Treasure> TreasureInventory { get; set; } = new List<Treasure>();   // Treasures
+        public List<IUsable> Inventory { get; set; } = new List<IUsable>();              // Usables
         public List<string> Quests { get; set; }                // Quests
         #endregion
         #region Constructors
@@ -37,10 +34,10 @@ namespace GameWorldLibrary
             HP = hp;
             AC = ac;
             Location = location;
-            PotionInventory = potionInventory;
-            ItemInventory = itemInventory;
-            WeaponInventory = weaponInventory;
-            TreasureInventory = treasureInventory;
+
+            // Add inventory lists to main Inventory
+            Inventory.Concat(itemInventory).Concat(potionInventory).Concat(weaponInventory).Concat(treasureInventory);
+
             Quests = quests;
         }
         #endregion

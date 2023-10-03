@@ -10,7 +10,7 @@ namespace GameWorldLibrary
     {
         #region Properties
         public static string Name { get; } = "Look";                                                 // Action Name
-        public static string[] Keywords { get; } = { "look", "inspect" };                                       // Action Keywords
+        public static string[] Keywords { get; } = { "show", "look", "inspect" };                                       // Action Keywords
         public static string[] Options { get; } = { "Items", "Potions", "Treasures", "Weapons", "Mobs" };    // Action Choices
         #endregion
         #region Methods

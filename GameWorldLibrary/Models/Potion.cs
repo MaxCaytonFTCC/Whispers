@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Potion
+    public class Potion : IUsable
     {
         #region Properties
         // Add affected stat property
@@ -15,6 +15,7 @@ namespace GameWorldLibrary
         public int Price { get; set; }
         public int ValueChange { get; set; }
         public string Description { get; set; }
+        public UsableType Type { get; } = UsableType.Potion;
         #endregion
         #region Constructors
         // Default Constructor

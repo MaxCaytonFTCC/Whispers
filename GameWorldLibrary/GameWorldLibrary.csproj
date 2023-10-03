@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ISingleAction.cs" />
     <Compile Include="Actions\Attack.cs" />
     <Compile Include="Actions\Drop.cs" />
     <Compile Include="Actions\Help.cs" />
@@ -50,7 +51,9 @@
     <Compile Include="Actions\Use.cs" />
     <Compile Include="Combat.cs" />
     <Compile Include="Display.cs" />
+    <Compile Include="GetList.cs" />
     <Compile Include="Global\Game.cs" />
+    <Compile Include="Interfaces\IUsable.cs" />
     <Compile Include="MobClass2.cs" />
     <Compile Include="Models\Damage.cs" />
     <Compile Include="Models\Item.cs" />
