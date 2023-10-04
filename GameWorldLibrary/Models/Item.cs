@@ -42,14 +42,14 @@ namespace GameWorldLibrary
         #endregion
         #region Methods
         #region Info Methods
-        public void Info()
+        public virtual void Info()
         {
             // Show info
             Console.WriteLine(Name);
             Console.WriteLine(Description);
             Console.WriteLine();
         }
-        public void InfoMore()
+        public virtual void InfoMore()
         {
             // Show more info
             Console.WriteLine(ID);
@@ -62,7 +62,7 @@ namespace GameWorldLibrary
         }
         #endregion
         #region Use Methods
-        public void Use(Player user)
+        public virtual void Use(Player user)
         {
             // Use code
         }
