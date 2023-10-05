@@ -60,7 +60,7 @@ namespace GameWorldLibrary
             else
             {
                 // For every Item in list (TEST)
-                foreach (Item item in RoomUsables)
+                foreach (Item item in items)
                 {
                     // Display Item Info
                     item.Info();
@@ -83,7 +83,7 @@ namespace GameWorldLibrary
             else
             {
                 // For every Weapon in list
-                foreach (Weapon weapon in RoomUsables)
+                foreach (Weapon weapon in weapons)
                 {
                     // Display Weapon Info
                     weapon.Info();
@@ -105,7 +105,7 @@ namespace GameWorldLibrary
             else
             {
                 // For every Treasure in list
-                foreach (Treasure treasure in RoomUsables)
+                foreach (Treasure treasure in treasures)
                 {
                     // Display Treasure Info
                     treasure.Info();
@@ -127,7 +127,7 @@ namespace GameWorldLibrary
             else
             {
                 // For every Potion in list
-                foreach (Potion potion in RoomUsables)
+                foreach (Potion potion in potions)
                 {
                     // Display Potion Info
                     potion.Info();
