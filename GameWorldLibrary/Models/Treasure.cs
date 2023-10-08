@@ -6,59 +6,22 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Treasure
+    public class Treasure : Item
     {
-        #region Properties
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public int Price { get; set; }
-        public bool QuestItem { get; set; }
-        public string Description { get; set; }
-        #endregion
         #region Constructors
         // Default Constructor
-        public Treasure() { }
+        public Treasure() 
+        {
+            Type = UsableType.Treasure;
+        }
         // Constructor
-        public Treasure(int id, string name, int price, bool questItem, string description)
-        {
-            ID = id;
-            Name = name;
-            Price = price;
-            QuestItem = questItem;
-            Description = description;
-        }
+        public Treasure(int id, string name, int price, bool questItem, bool required, string description, UsableType usableType) : base(id, name, price, questItem, required, description, usableType) { }
         // Clone Constructor
-        public Treasure(Treasure basis)
-        {
-            ID = basis.ID;
-            Name = basis.Name;
-            Price = basis.Price;
-            QuestItem = basis.QuestItem;
-            Description = basis.Description;
-        }
+        public Treasure(Treasure basis) : base(basis.ID, basis.Name, basis.Price, basis.QuestItem, basis.Required, basis.Description, basis.Type) { }
         #endregion
         #region Methods
-        #region Info Methods
-        public void Info()
-        {
-            // Show info
-            Console.WriteLine(Name);
-            Console.WriteLine(Description);
-            Console.WriteLine();
-        }
-        public void InfoMore()
-        {
-            // Show more info
-            Console.WriteLine(ID);
-            Console.WriteLine(Name);
-            Console.WriteLine("$" + Price);
-            Console.WriteLine("Quest Item: " + QuestItem);
-            Console.WriteLine(Description);
-            Console.WriteLine();
-        }
-        #endregion
         #region Use Methods
-        public void Use(Player user)
+        public override void Use(Player user)
         {
             // Use code
         }

@@ -1,5 +1,5 @@
 ﻿/**
-* 9/17/2023
+* 10/4/2023 
 * CSC 253
 * Group 3
 * Group Members: Max Cayton, Kevin McCroary, Joseph McCollum
@@ -19,9 +19,9 @@ namespace ConsoleUI
     class Program
     {
         static void Main(string[] args)
-        {            
+        {           
             LoadGame.RunLoad();
-           
+
             // Welcome the User
             Display.DisplayWelcomeInstructions();
 

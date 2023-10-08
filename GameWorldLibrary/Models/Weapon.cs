@@ -6,50 +6,36 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Weapon
+    public class Weapon : Item
     {
         #region Properties
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
         public string DamageType { get; set; }
         public int Damage { get; set; }
-        public int Price { get; set; }
         #endregion
         #region Constructors
         // Default Constructor
-        public Weapon() { }
-        // Constructor
-        public Weapon(int id, string name, string description, string damageType, int price, int damage)
+        public Weapon() 
         {
-            ID = id;
-            Name = name;
-            Description = description;
+            Damage = 1;
+            DamageType = "Slashing";
+            Type = UsableType.Weapon;
+        }
+        // Constructor
+        public Weapon(int id, string name, string description, string damageType, int price, bool questItem, bool required, int damage, UsableType usableType) : base(id, name, price, questItem, required, description, usableType)
+        {
             Damage = damage;
             DamageType = damageType;
-            Price = price;
         }
         // Clone Constructor
-        public Weapon(Weapon basis)
+        public Weapon(Weapon basis) : base(basis.ID, basis.Name, basis.Price, basis.QuestItem, basis.Required, basis.Description, basis.Type)
         {
-            ID = basis.ID;
-            Name = basis.Name;
-            Description = basis.Description;
             Damage = basis.Damage;
             DamageType = basis.DamageType;
-            Price = basis.Price;
         }
         #endregion
         #region Methods
         #region Info Methods
-        public void Info()
-        {
-            // Show info
-            Console.WriteLine(Name);
-            Console.WriteLine(Description);
-            Console.WriteLine();
-        }
-        public void InfoMore()
+        public override void InfoMore()
         {
             // Show more info
             Console.WriteLine(ID);
@@ -62,7 +48,7 @@ namespace GameWorldLibrary
         }
         #endregion
         #region Use Methods
-        public void Use(Player user)
+        public override void Use(Player user)
         {
             // Use code
         }

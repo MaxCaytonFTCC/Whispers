@@ -150,17 +150,19 @@ namespace GameWorldLibrary
 
         public static void DisplayWeaponInstructions()
         {
+            // Get weapons list
+            List<Item> weapons = GetList.Item(World.player.Inventory, UsableType.Weapon);
 
-            if (World.player.WeaponInventory.Count < 1)
+            if (weapons.Count < 1)
             {
                 DisplayNoWeaponMessage();
             }
             else
             {
-                for (int i = 0; i < World.player.WeaponInventory.Count; i++)
+                for (int i = 0; i < weapons.Count; i++)
                 {
-                    Console.WriteLine((i + 1).ToString() + ". " + World.player.WeaponInventory[i].Name);
-                    Console.WriteLine("Weapon Description: " + World.player.WeaponInventory[i].Description + "\n");
+                    Console.WriteLine((i + 1).ToString() + ". " + weapons[i].Name);
+                    Console.WriteLine("Weapon Description: " + weapons[i].Description + "\n");
                 }
 
                 Console.Write("Select a weapon to fight with: ");

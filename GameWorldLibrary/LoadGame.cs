@@ -34,7 +34,7 @@ namespace GameWorldLibrary
 
                     if (index != 0)
                     {                        
-                        World.weapons.Add(new Weapon(int.Parse(tokens[0]),tokens[1],tokens[2],tokens[3],int.Parse(tokens[4]),int.Parse(tokens[5])));
+                        World.weapons.Add(new Weapon(int.Parse(tokens[0]),tokens[1],tokens[2],tokens[3],int.Parse(tokens[4]), bool.Parse(tokens[5]), bool.Parse(tokens[6]), int.Parse(tokens[7]),UsableType.Weapon));
                     }
 
                     else
@@ -58,7 +58,7 @@ namespace GameWorldLibrary
 
                     if (index != 0)
                     {
-                        World.items.Add(new Item(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), bool.Parse(tokens[3]), bool.Parse(tokens[4]), tokens[5]));
+                        World.items.Add(new Item(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), bool.Parse(tokens[3]), bool.Parse(tokens[4]), tokens[5], UsableType.Potion));
                     }
 
                     else
@@ -82,7 +82,7 @@ namespace GameWorldLibrary
 
                     if (index != 0)
                     {
-                        World.treasures.Add(new Treasure(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), bool.Parse(tokens[3]), tokens[4]));
+                        World.treasures.Add(new Treasure(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), bool.Parse(tokens[3]), bool.Parse(tokens[4]), tokens[5], UsableType.Potion));
                     }
 
                     else
@@ -106,7 +106,7 @@ namespace GameWorldLibrary
 
                     if (index != 0)
                     {
-                        World.potions.Add(new Potion(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), int.Parse(tokens[3]), tokens[4]));
+                        World.potions.Add(new Potion(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), bool.Parse(tokens[3]), bool.Parse(tokens[4]), int.Parse(tokens[5]), tokens[6],UsableType.Potion));
                     }
 
                     else
@@ -130,7 +130,7 @@ namespace GameWorldLibrary
                     if (index != 0)
                     {
                         // TODO Build Lists with new IDs
-                        World.mobs.Add(new Mob(int.Parse(tokens[0]),tokens[1],tokens[2],tokens[3],int.Parse(tokens[4]),int.Parse(tokens[5]),tokens[6],tokens[7], new List<Treasure>()));
+                        World.mobs.Add(new Mob(int.Parse(tokens[0]),tokens[1],tokens[2],tokens[3],int.Parse(tokens[4]),int.Parse(tokens[5]),tokens[6],tokens[7], new List<Item>(), new EquipmentSlots()));
                     }
 
                     else
@@ -154,8 +154,6 @@ namespace GameWorldLibrary
 
                     if (index != 0)
                     {
-                        //World.rooms.Add(new Room(int.Parse(tokens[0]),tokens[1], tokens[2],Room.GetSubArray(tokens[3]),Room.GetItems(tokens[4]),Room.GetMobs(tokens[5]),Room.GetWeapons(tokens[6]),Room.GetTreasures(tokens[7]),Room.GetPotions(tokens[8]),new List<Player>()));
-                        
                         // Construct Room
                         Room room = new Room();
 
@@ -165,12 +163,15 @@ namespace GameWorldLibrary
                         room.Description = tokens[2];
 
                         // Move GetObject functions into their own class at some point
-                        room.Exits = Room.GetSubArray(tokens[3]);
-                        room.RoomItems = Room.GetItems(tokens[4]);
-                        room.RoomPotions = Room.GetPotions(tokens[5]);
-                        room.RoomTreasures = Room.GetTreasures(tokens[6]);
-                        room.RoomWeapons = Room.GetWeapons(tokens[7]);
-                        room.RoomMobs = Room.GetMobs(tokens[8]);
+                        room.Exits = GetList.SubArray(tokens[3]);
+
+                        // Add to usables list
+                        room.RoomItems.Concat(GetList.ItemsfromString(tokens[4]));
+                        room.RoomItems.Concat(GetList.PotionsfromString(tokens[5]));
+                        room.RoomItems.Concat(GetList.TreasuresfromString(tokens[6]));
+                        room.RoomItems.Concat(GetList.WeaponsfromString(tokens[7]));
+
+                        room.RoomMobs = GetList.MobsfromString(tokens[8]);
                         room.RoomPlayers = new List<Player>();
 
                         // Add the room
@@ -190,5 +191,29 @@ namespace GameWorldLibrary
         {
             World.rooms[player.Location].RoomPlayers.Add(player);
         }
+
+        // Method for copying Mob Objects From List to List
+        public static void CopyMobToList(ref List<Mob> preivousList, Mob targetMob, ref List<Mob> targetList, bool remove = true)
+        {
+            // Remove from previous list (if enabled)
+            if (remove == true)
+            {
+                int listIndex = 0;
+                foreach (var mob in preivousList)
+                {
+                    if (mob == targetMob)
+                    {
+                        preivousList.RemoveAt(listIndex);
+                        break;
+                    }
+                    listIndex++;
+                }
+            }
+
+            // Add to target List
+            targetList.Add(targetMob);
+
+        }
+
     }
 }

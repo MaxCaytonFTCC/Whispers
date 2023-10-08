@@ -13,10 +13,7 @@ namespace GameWorldLibrary
         public string Name { get; set; }
         public string Description { get; set; }
         public int[] Exits { get; set; }
-        public List<Item> RoomItems { get; set; }
-        public List<Weapon> RoomWeapons { get; set; }
-        public List<Treasure> RoomTreasures { get; set; }
-        public List<Potion> RoomPotions { get; set; }
+        public List<Item> RoomItems { get; set; } = new List<Item>();
         public List<Mob> RoomMobs { get; set; }
         public List<Player> RoomPlayers { get; set; }
         #endregion
@@ -31,11 +28,12 @@ namespace GameWorldLibrary
             Name = name;
             Description = description;
             Exits = exits;
-            RoomItems = roomItems;
+
+            // Add room usables to list
+            RoomItems.Concat(roomItems).Concat(roomWeapons).Concat(roomTreasures).Concat(roomPotions);
+
+            // Join lists together after inheritance
             RoomMobs = roomMobs;
-            RoomWeapons = roomWeapons;
-            RoomTreasures = roomTreasures;
-            RoomPotions = roomPotions;
             RoomPlayers = roomPlayers;
         }
         #endregion
@@ -49,8 +47,11 @@ namespace GameWorldLibrary
         }
         public void InfoItems()         // Show Item Names and Descriptions
         {
+            // Get Items list
+            List<Item> items = GetList.Item(RoomItems, UsableType.Item);
+
             // If there are no Items in the Room
-            if (RoomItems.Count == 0)
+            if (items.Count == 0)
             {
                 // Print message
                 Console.WriteLine("There are no items here");
@@ -58,37 +59,22 @@ namespace GameWorldLibrary
             // If there are Items in the Room
             else
             {
-                // For every Item in list
-                foreach (Item item in RoomItems)
+                // For every Item in list (TEST)
+                foreach (Item item in items)
                 {
                     // Display Item Info
                     item.Info();
                 }
             }
         }
-        public void InfoMobs()          // Show Mob Names and Descriptions
-        {
-            // If there are no Mobs in the Room
-            if (RoomMobs.Count == 0)
-            {
-                // Print message
-                Console.WriteLine("There are no mobs here");
-            }
-            // If there are Mobs in the Room
-            else
-            {
-                // For every Mob in list
-                foreach (Mob mob in RoomMobs)
-                {
-                    // Display Mob Info
-                    mob.Info();
-                }
-            }
-        }
+        
         public void InfoWeapons()       // Show Weapon Names and Descriptions
         {
+            // Get Weapons list
+            List<Item> weapons = GetList.Item(RoomItems, UsableType.Item);
+
             // If there are no Weapons in the Room
-            if (RoomWeapons.Count == 0)
+            if (weapons.Count == 0)
             {
                 // Print message
                 Console.WriteLine("There are no weapons here");
@@ -97,7 +83,7 @@ namespace GameWorldLibrary
             else
             {
                 // For every Weapon in list
-                foreach (Weapon weapon in RoomWeapons)
+                foreach (Item weapon in weapons)
                 {
                     // Display Weapon Info
                     weapon.Info();
@@ -106,8 +92,11 @@ namespace GameWorldLibrary
         }
         public void InfoTreasures()     // Show Treasure Names and Descriptions
         {
+            // Get Treasures list
+            List<Item> treasures = GetList.Item(RoomItems, UsableType.Item);
+
             // If there are no Treasures in the Room
-            if (RoomTreasures.Count == 0)
+            if (treasures.Count == 0)
             {
                 // Print message
                 Console.WriteLine("There are no treasures here");
@@ -116,7 +105,7 @@ namespace GameWorldLibrary
             else
             {
                 // For every Treasure in list
-                foreach (Treasure treasure in RoomTreasures)
+                foreach (Item treasure in treasures)
                 {
                     // Display Treasure Info
                     treasure.Info();
@@ -125,8 +114,11 @@ namespace GameWorldLibrary
         }
         public void InfoPotions()       // Show Potion Names and Descriptions
         {
+            // Get Potions list
+            List<Item> potions = GetList.Item(RoomItems, UsableType.Item);
+
             // If there are no Potions in the Room
-            if (RoomPotions.Count == 0)
+            if (potions.Count == 0)
             {
                 // Print message
                 Console.WriteLine("There are no potions here");
@@ -135,7 +127,7 @@ namespace GameWorldLibrary
             else
             {
                 // For every Potion in list
-                foreach (Potion potion in RoomPotions)
+                foreach (Item potion in potions)
                 {
                     // Display Potion Info
                     potion.Info();
@@ -161,122 +153,26 @@ namespace GameWorldLibrary
                 }
             }
         }
+        public void InfoMobs()          // Show Mob Names and Descriptions
+        {
+            // If there are no Mobs in the Room
+            if (RoomMobs.Count == 0)
+            {
+                // Print message
+                Console.WriteLine("There are no mobs here");
+            }
+            // If there are Mobs in the Room
+            else
+            {
+                // For every Mob in list
+                foreach (Mob mob in RoomMobs)
+                {
+                    // Display Mob Info
+                    mob.Info();
+                }
+            }
+        }
         #endregion
-        // Split into separate Class
-        public static int[] GetSubArray(string array_string)
-        {
-            // Split string into tokens
-            string[] tokens = array_string.Split('_');
-
-            // Create int array
-            int[] int_array = new int[tokens.Length];
-
-            // For every token
-            for (int i = 0; i < tokens.Length; i++)
-            {
-                // If token entry is empty, replace with a -1
-                int_array[i] = (tokens[i] != "") ? int.Parse(tokens[i]): -1;
-            }
-
-            // Return int array
-            return int_array;
-        }
-
-        public static List<Item> GetItems(string items)
-        {
-            int[] item_tokens = GetSubArray(items);
-
-            List<Item> itemList = new List<Item>();
-
-            // Cut item list entries if first entry is -1
-            if (item_tokens[0] == -1)
-            {
-                return itemList;
-            }
-
-            for (int i = 0; i < item_tokens.Length; i++)
-            {
-                itemList.Add(World.items[item_tokens[i]]);
-            }
-
-            return itemList;
-        }
-
-        public static List<Mob> GetMobs(string mobs)
-        {
-            int[] mob_tokens = GetSubArray(mobs);
-
-            List<Mob> mobList = new List<Mob>();
-
-            if (mob_tokens[0] == -1)
-            {
-                return mobList;
-            }
-
-            for (int i = 0; i < mob_tokens.Length; i++)
-            {
-                mobList.Add(World.mobs[mob_tokens[i]]);
-            }
-
-            return mobList;
-        }
-
-        public static List<Weapon> GetWeapons(string weapons)
-        {
-            int[] weapon_tokens = GetSubArray(weapons);
-
-            List<Weapon> weaponList = new List<Weapon>();
-
-            if (weapon_tokens[0] == -1)
-            {
-                return weaponList;
-            }
-
-            for (int i = 0; i < weapon_tokens.Length; i++)
-            {
-                weaponList.Add(World.weapons[weapon_tokens[i]]);
-            }
-
-            return weaponList;
-        }
-
-        public static List<Treasure> GetTreasures(string treasures)
-        {
-            int[] treasure_tokens = GetSubArray(treasures);
-            List<Treasure> treasureList = new List<Treasure>();
-
-            if (treasure_tokens[0] == -1)
-            {
-                return treasureList;
-            }
-
-            for (int i = 0; i < treasure_tokens.Length; i++)
-            {
-                treasureList.Add(World.treasures[treasure_tokens[i]]);
-            }
-
-            return treasureList;
-
-        }
-
-        public static List<Potion> GetPotions(string potions)
-        {
-            int[] potion_tokens = GetSubArray(potions);
-            List<Potion> potionList = new List<Potion>();
-
-            if (potion_tokens[0] == -1)
-            {
-                return potionList;
-            }
-
-            for (int i = 0; i < potion_tokens.Length; i++)
-            {
-                potionList.Add(World.potions[potion_tokens[i]]);
-            }
-
-            return potionList;
-
-        }
         #endregion
     }
 }
