@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Weapon : Usable
+    public class Weapon : Item
     {
         #region Properties
         public string DamageType { get; set; }
@@ -14,50 +14,31 @@ namespace GameWorldLibrary
         #endregion
         #region Constructors
         // Default Constructor
-        public Weapon() :
-            base()
-        {
-            DamageType = "";
-            Damage = 0;
-            Type = UsableType.Weapon;
-        }
+        public Weapon() { }
         // Constructor
-        public Weapon(int id, string name, string description, string damageType, int price, int damage) :
-            base(id, name, price, description)
+        public Weapon(int id, string name, string description, string damageType, int price, bool questItem, bool required, int damage) : base(id, name, price, questItem, required, description)
         {
             Damage = damage;
             DamageType = damageType;
-            Type = UsableType.Weapon;
         }
         // Clone Constructor
-        public Weapon(Weapon basis) :
-            base(basis)
+        public Weapon(Weapon basis) : base(basis.ID, basis.Name, basis.Price, basis.QuestItem, basis.Required, basis.Description)
         {
             Damage = basis.Damage;
             DamageType = basis.DamageType;
-            Type = UsableType.Weapon;
         }
         #endregion
         #region Methods
         #region Info Methods
-        public override void Info()
-        {
-            // Use base info method
-            base.Info();
-
-            // Show item info
-            Console.WriteLine(DamageType);
-            Console.WriteLine(Damage);
-            Console.WriteLine();
-        }
         public override void InfoMore()
         {
-           // Use base info method
-            base.Info();
-
-            // Show item info
+            // Show more info
+            Console.WriteLine(ID);
+            Console.WriteLine(Name);
+            Console.WriteLine(Description);
             Console.WriteLine(DamageType);
             Console.WriteLine(Damage);
+            Console.WriteLine("$" + Price);
             Console.WriteLine();
         }
         #endregion

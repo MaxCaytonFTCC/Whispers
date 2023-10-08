@@ -16,3 +16,9 @@ C:\Users\kmccr\Source\Repos\MaxCaytonFTCC\Whispers\GameWorldLibrary\obj\Debug\Ga
 C:\Users\kmccr\Source\Repos\MaxCaytonFTCC\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CoreCompileInputs.cache
 C:\Users\kmccr\Source\Repos\MaxCaytonFTCC\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.dll
 C:\Users\kmccr\Source\Repos\MaxCaytonFTCC\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.pdb
+C:\Users\super\OneDrive\Desktop\Whispers cm_branch\GameWorldLibrary\bin\Debug\GameWorldLibrary.dll
+C:\Users\super\OneDrive\Desktop\Whispers cm_branch\GameWorldLibrary\bin\Debug\GameWorldLibrary.pdb
+C:\Users\super\OneDrive\Desktop\Whispers cm_branch\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.AssemblyReference.cache
+C:\Users\super\OneDrive\Desktop\Whispers cm_branch\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CoreCompileInputs.cache
+C:\Users\super\OneDrive\Desktop\Whispers cm_branch\GameWorldLibrary\obj\Debug\GameWorldLibrary.dll
+C:\Users\super\OneDrive\Desktop\Whispers cm_branch\GameWorldLibrary\obj\Debug\GameWorldLibrary.pdb

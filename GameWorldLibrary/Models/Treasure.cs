@@ -6,55 +6,17 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Treasure : Usable
+    public class Treasure : Item
     {
-        #region Properties
-        public bool QuestItem { get; set; }
-        #endregion
         #region Constructors
         // Default Constructor
-        public Treasure() :
-            base()
-        {
-            QuestItem = false;
-            Type = UsableType.Treasure;
-        }
+        public Treasure() { }
         // Constructor
-        public Treasure(int id, string name, int price, bool questItem, string description) :
-            base(id, name, price, description)
-        {
-            QuestItem = questItem;
-            Type = UsableType.Treasure;
-        }
+        public Treasure(int id, string name, int price, bool questItem, bool required, string description) : base(id, name, price, questItem, required, description) { }
         // Clone Constructor
-        public Treasure(Treasure basis) :
-            base(basis)
-        {
-            QuestItem = basis.QuestItem;
-            Type = UsableType.Treasure;
-        }
+        public Treasure(Treasure basis) : base(basis.ID, basis.Name, basis.Price, basis.QuestItem, basis.Required, basis.Description) { }
         #endregion
         #region Methods
-        #region Info Methods
-        public override void Info()
-        {
-            // Use base info method
-            base.Info();
-
-            // Show treasure info
-            Console.WriteLine("Quest Item: " + QuestItem);
-            Console.WriteLine();
-        }
-        public override void InfoMore()
-        {
-            // Use base infomore
-            base.InfoMore();
-
-            // Show treasure info
-            Console.WriteLine("Quest Item: " + QuestItem);
-            Console.WriteLine();
-        }
-        #endregion
         #region Use Methods
         public override void Use(Player user)
         {
