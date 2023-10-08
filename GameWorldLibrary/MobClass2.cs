@@ -127,9 +127,21 @@ namespace GameWorldLibrary
                         Console.WriteLine("A pack of Wild Dogs have appeared!");
                         break;
                 }
+            }
 
 
-                public class Weapon
+            //Defined the Damage / Attack
+            public enum DamageType
+            {
+                Claw,
+                Molotov,
+                FireBurst,
+                Crossbow,
+                Bite,
+
+            }
+
+            public class Weapon
                 {
                     public string Name { get; set; }
                     public int Damage { get; set; }
@@ -196,7 +208,5 @@ namespace GameWorldLibrary
                     }
                 }
             }
-
         }
     }
-}
