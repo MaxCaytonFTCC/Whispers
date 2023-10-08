@@ -15,14 +15,18 @@ namespace GameWorldLibrary
         #endregion
         #region Constructors
         // Default Constructor
-        public Potion() { }
+        public Potion() 
+        {
+            ValueChange = 0;
+            Type = UsableType.Potion;
+        }
         // Constructor
-        public Potion(int id, string name, int price, bool questItem, bool required, int valueChange, string description) : base(id,name,price,questItem,required,description)
+        public Potion(int id, string name, int price, bool questItem, bool required, int valueChange, string description, UsableType usableType) : base(id,name,price,questItem,required,description,usableType)
         {
             ValueChange = valueChange;
         }
         // Clone Constructor
-        public Potion(Potion basis) : base(basis.ID, basis.Name, basis.Price, basis.QuestItem, basis.Required, basis.Description)
+        public Potion(Potion basis) : base(basis.ID, basis.Name, basis.Price, basis.QuestItem, basis.Required, basis.Description, basis.Type)
         {
             ValueChange = basis.ValueChange;
         }

@@ -14,15 +14,20 @@ namespace GameWorldLibrary
         #endregion
         #region Constructors
         // Default Constructor
-        public Weapon() { }
+        public Weapon() 
+        {
+            Damage = 1;
+            DamageType = "Slashing";
+            Type = UsableType.Weapon;
+        }
         // Constructor
-        public Weapon(int id, string name, string description, string damageType, int price, bool questItem, bool required, int damage) : base(id, name, price, questItem, required, description)
+        public Weapon(int id, string name, string description, string damageType, int price, bool questItem, bool required, int damage, UsableType usableType) : base(id, name, price, questItem, required, description, usableType)
         {
             Damage = damage;
             DamageType = damageType;
         }
         // Clone Constructor
-        public Weapon(Weapon basis) : base(basis.ID, basis.Name, basis.Price, basis.QuestItem, basis.Required, basis.Description)
+        public Weapon(Weapon basis) : base(basis.ID, basis.Name, basis.Price, basis.QuestItem, basis.Required, basis.Description, basis.Type)
         {
             Damage = basis.Damage;
             DamageType = basis.DamageType;

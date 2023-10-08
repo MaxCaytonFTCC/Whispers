@@ -23,7 +23,7 @@ namespace GameWorldLibrary
             Description = description;
         }
         // Clone Constructor
-        public Mob(Mob basis) : base(basis.ID, basis.Name, basis.Race, basis.CombatClass, basis.HP, basis.AC, basis.ItemInventory, basis.PotionInventory, basis.WeaponInventory, basis.TreasureInventory, basis.EntityEquipmentSlots)
+        public Mob(Mob basis) : base(basis.ID, basis.Name, basis.Race, basis.CombatClass, basis.HP, basis.AC, basis.Inventory,basis.EntityEquipmentSlots)
         {
             ID = basis.ID;
             Name = basis.Name;
@@ -33,7 +33,7 @@ namespace GameWorldLibrary
             AC = basis.AC;
             Weapon = basis.Weapon;
             Description = basis.Description;
-            TreasureInventory = basis.TreasureInventory;
+            Inventory = basis.Inventory;
         }
         #endregion
         #region Methods

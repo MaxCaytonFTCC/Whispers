@@ -18,7 +18,7 @@ namespace GameWorldLibrary
         // Default Constructor
         public Player() { }
         // Constructor
-        public Player(int id, string name, string password, string race, string combatClass, int hp, int ac, int location, List<Item> itemInventory, List<Potion> potionInventory, List<Weapon> weaponInventory, List<Treasure> treasureInventory, EquipmentSlots equipmentSlots, List<string> quests) : base(id, name, race, combatClass, hp, ac, itemInventory, potionInventory, weaponInventory, treasureInventory, equipmentSlots)
+        public Player(int id, string name, string password, string race, string combatClass, int hp, int ac, int location, List<Item> inventory, EquipmentSlots equipmentSlots, List<string> quests) : base(id, name, race, combatClass, hp, ac, inventory, equipmentSlots)
         {
             Location = location;
             Password = password;

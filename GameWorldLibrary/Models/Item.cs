@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Item
+    public class Item : IUsable
     {
         #region Properties
         public int ID { get; set; }
@@ -15,12 +15,17 @@ namespace GameWorldLibrary
         public bool QuestItem { get; set; }
         public bool Required { get; set; }
         public string Description { get; set; }
+        public UsableType Type { get; set; }
+
         #endregion
         #region Constructors
         // Default Constructor
-        public Item() { }
+        public Item() 
+        {
+            Type = UsableType.Item;
+        }
         // Consructor
-        public Item(int id, string name, int price, bool questItem, bool required, string description)
+        public Item(int id, string name, int price, bool questItem, bool required, string description, UsableType usableType)
         {
             ID = id;
             Name = name;
@@ -28,6 +33,7 @@ namespace GameWorldLibrary
             QuestItem = questItem;
             Required = required;
             Description = description;
+            Type = usableType;
         }
         // Clone Constructor
         public Item(Item basis)

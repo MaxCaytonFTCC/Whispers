@@ -15,19 +15,14 @@ namespace GameWorldLibrary.Models
         public string CombatClass { get; set; }                 // Combat Class
         public int HP { get; set; }                             // Health Points
         public int AC { get; set; }                             // Armor Class
-        
-        // TODO Replace lists with new Inventory
-        public List<Item> ItemInventory { get; set; } = new List<Item>();               // Items
-        public List<Potion> PotionInventory { get; set; } = new List<Potion>();         // Potions
-        public List<Weapon> WeaponInventory { get; set; } = new List<Weapon>();         // Weapons
-        public List<Treasure> TreasureInventory { get; set; } = new List<Treasure>();   // Treasures
+        public List<Item> Inventory { get; set; } = new List<Item>();               // Items
         public EquipmentSlots EntityEquipmentSlots { get; set; } = new EquipmentSlots();
         #endregion
 
         // Default Constructor
         public Entity() { }
 
-        public Entity(int id, string name, string race, string combatClass, int hp, int ac, List<Item> itemInventory, List<Potion> potionInventory, List<Weapon> weaponInventory, List<Treasure> treasureInventory, EquipmentSlots equipmentSlots)
+        public Entity(int id, string name, string race, string combatClass, int hp, int ac, List<Item> inventory, EquipmentSlots equipmentSlots)
         {
             ID = id;
             Name = name;
@@ -35,10 +30,7 @@ namespace GameWorldLibrary.Models
             CombatClass = combatClass;
             HP = hp;
             AC = ac;
-            PotionInventory = potionInventory;
-            ItemInventory = itemInventory;
-            WeaponInventory = weaponInventory;
-            TreasureInventory = treasureInventory;
+            Inventory = inventory;
             EntityEquipmentSlots = equipmentSlots;
         }
 
