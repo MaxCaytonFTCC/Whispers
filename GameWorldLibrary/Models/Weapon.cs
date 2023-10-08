@@ -6,63 +6,63 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Weapon
+    public class Weapon : Usable
     {
         #region Properties
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
         public string DamageType { get; set; }
         public int Damage { get; set; }
-        public int Price { get; set; }
         #endregion
         #region Constructors
         // Default Constructor
-        public Weapon() { }
-        // Constructor
-        public Weapon(int id, string name, string description, string damageType, int price, int damage)
+        public Weapon() :
+            base()
         {
-            ID = id;
-            Name = name;
-            Description = description;
+            DamageType = "";
+            Damage = 0;
+            Type = UsableType.Weapon;
+        }
+        // Constructor
+        public Weapon(int id, string name, string description, string damageType, int price, int damage) :
+            base(id, name, price, description)
+        {
             Damage = damage;
             DamageType = damageType;
-            Price = price;
+            Type = UsableType.Weapon;
         }
         // Clone Constructor
-        public Weapon(Weapon basis)
+        public Weapon(Weapon basis) :
+            base(basis)
         {
-            ID = basis.ID;
-            Name = basis.Name;
-            Description = basis.Description;
             Damage = basis.Damage;
             DamageType = basis.DamageType;
-            Price = basis.Price;
+            Type = UsableType.Weapon;
         }
         #endregion
         #region Methods
         #region Info Methods
-        public void Info()
+        public override void Info()
         {
-            // Show info
-            Console.WriteLine(Name);
-            Console.WriteLine(Description);
-            Console.WriteLine();
-        }
-        public void InfoMore()
-        {
-            // Show more info
-            Console.WriteLine(ID);
-            Console.WriteLine(Name);
-            Console.WriteLine(Description);
+            // Use base info method
+            base.Info();
+
+            // Show item info
             Console.WriteLine(DamageType);
             Console.WriteLine(Damage);
-            Console.WriteLine("$" + Price);
+            Console.WriteLine();
+        }
+        public override void InfoMore()
+        {
+           // Use base info method
+            base.Info();
+
+            // Show item info
+            Console.WriteLine(DamageType);
+            Console.WriteLine(Damage);
             Console.WriteLine();
         }
         #endregion
         #region Use Methods
-        public void Use(Player user)
+        public override void Use(Player user)
         {
             // Use code
         }

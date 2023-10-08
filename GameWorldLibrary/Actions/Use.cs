@@ -57,28 +57,28 @@ namespace GameWorldLibrary
                 // Player wants to use Items
                 case "items":
                     // Get Item selection
-                    Activate(user, Menu.Run(user.ItemInventory.ToArray(), true));
+                    //Activate(user, Menu.Run(user.ItemInventory.ToArray(), true));
                     // Break
                     break;
 
                 // Player wants to use Potions
                 case "potions":
                     // Get Potion selection
-                    Activate(user, Menu.Run(user.PotionInventory.ToArray(), true));
+                    //Activate(user, Menu.Run(user.PotionInventory.ToArray(), true));
                     // Break
                     break;
 
                 // Player wants to use Treasures
                 case "treasures":
                     // Get Treasure selection
-                    Activate(user, Menu.Run(user.TreasureInventory.ToArray(), true));
+                    //Activate(user, Menu.Run(user.TreasureInventory.ToArray(), true));
                     // Break
                     break;
 
                 // Player wants to use Weapons
                 case "weapons":
                     // Get Weapon selection
-                    Activate(user, Menu.Run(user.WeaponInventory.ToArray(), true));
+                    //Activate(user, Menu.Run(user.WeaponInventory.ToArray(), true));
                     // Break
                     break;
 

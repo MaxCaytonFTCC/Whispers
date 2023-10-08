@@ -6,60 +6,58 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Potion
+    public class Potion : Usable
     {
         #region Properties
         // Add affected stat property
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public int Price { get; set; }
         public int ValueChange { get; set; }
-        public string Description { get; set; }
         #endregion
         #region Constructors
         // Default Constructor
-        public Potion() { }
-        // Constructor
-        public Potion(int id, string name, int price, int valueChange, string description)
+        public Potion() : base()
         {
-            ID = id;
-            Name = name;
-            Price = price;
+            ValueChange = 0;
+            Type = UsableType.Potion;
+        }
+        // Constructor
+        public Potion(int id, string name, int price, int valueChange, string description) :
+            base(id, name, price, description)
+        {
             ValueChange = valueChange;
-            Description = description;
+            Type = UsableType.Potion;
         }
         // Clone Constructor
-        public Potion(Potion basis)
+        public Potion(Potion basis) :
+            base(basis)
         {
-            ID = basis.ID;
-            Name = basis.Name;
-            Price = basis.Price;
             ValueChange = basis.ValueChange;
-            Description = basis.Description;
+            Type = UsableType.Potion;
         }
         #endregion
         #region Methods
         #region Info Methods
-        public void Info()
+        public override void Info()
         {
-            // Show info
+            // Show base info
+            base.Info();
+
+            // Show potion info
             Console.WriteLine(Name);
             Console.WriteLine(Description);
             Console.WriteLine();
         }
-        public void InfoMore()
+        public override void InfoMore()
         {
-            // Show more info
-            Console.WriteLine(ID);
-            Console.WriteLine(Name);
-            Console.WriteLine("$" + Price);
+            // Show base informore
+            base.InfoMore();
+
+            // Show potion info
             Console.WriteLine(ValueChange); // Add affected stat here (Ex: HP - ValueChanged)
-            Console.WriteLine(Description);
             Console.WriteLine();
         }
         #endregion
         #region Use Methods
-        public void Use(Player user)
+        public override void Use(Player user)
         {
             // Use code
         }

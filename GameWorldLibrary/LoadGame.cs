@@ -154,8 +154,6 @@ namespace GameWorldLibrary
 
                     if (index != 0)
                     {
-                        //World.rooms.Add(new Room(int.Parse(tokens[0]),tokens[1], tokens[2],Room.GetSubArray(tokens[3]),Room.GetItems(tokens[4]),Room.GetMobs(tokens[5]),Room.GetWeapons(tokens[6]),Room.GetTreasures(tokens[7]),Room.GetPotions(tokens[8]),new List<Player>()));
-                        
                         // Construct Room
                         Room room = new Room();
 
@@ -165,12 +163,15 @@ namespace GameWorldLibrary
                         room.Description = tokens[2];
 
                         // Move GetObject functions into their own class at some point
-                        room.Exits = Room.GetSubArray(tokens[3]);
-                        room.RoomItems = Room.GetItems(tokens[4]);
-                        room.RoomPotions = Room.GetPotions(tokens[5]);
-                        room.RoomTreasures = Room.GetTreasures(tokens[6]);
-                        room.RoomWeapons = Room.GetWeapons(tokens[7]);
-                        room.RoomMobs = Room.GetMobs(tokens[8]);
+                        room.Exits = GetList.SubArray(tokens[3]);
+
+                        // Add to usables list
+                        room.RoomUsables.Concat(GetList.ItemsfromString(tokens[4]));
+                        room.RoomUsables.Concat(GetList.PotionsfromString(tokens[5]));
+                        room.RoomUsables.Concat(GetList.TreasuresfromString(tokens[6]));
+                        room.RoomUsables.Concat(GetList.WeaponsfromString(tokens[7]));
+
+                        room.RoomMobs = GetList.MobsfromString(tokens[8]);
                         room.RoomPlayers = new List<Player>();
 
                         // Add the room

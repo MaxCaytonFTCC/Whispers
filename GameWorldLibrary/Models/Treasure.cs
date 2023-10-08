@@ -6,59 +6,57 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Treasure
+    public class Treasure : Usable
     {
         #region Properties
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public int Price { get; set; }
         public bool QuestItem { get; set; }
-        public string Description { get; set; }
         #endregion
         #region Constructors
         // Default Constructor
-        public Treasure() { }
-        // Constructor
-        public Treasure(int id, string name, int price, bool questItem, string description)
+        public Treasure() :
+            base()
         {
-            ID = id;
-            Name = name;
-            Price = price;
+            QuestItem = false;
+            Type = UsableType.Treasure;
+        }
+        // Constructor
+        public Treasure(int id, string name, int price, bool questItem, string description) :
+            base(id, name, price, description)
+        {
             QuestItem = questItem;
-            Description = description;
+            Type = UsableType.Treasure;
         }
         // Clone Constructor
-        public Treasure(Treasure basis)
+        public Treasure(Treasure basis) :
+            base(basis)
         {
-            ID = basis.ID;
-            Name = basis.Name;
-            Price = basis.Price;
             QuestItem = basis.QuestItem;
-            Description = basis.Description;
+            Type = UsableType.Treasure;
         }
         #endregion
         #region Methods
         #region Info Methods
-        public void Info()
+        public override void Info()
         {
-            // Show info
-            Console.WriteLine(Name);
-            Console.WriteLine(Description);
+            // Use base info method
+            base.Info();
+
+            // Show treasure info
+            Console.WriteLine("Quest Item: " + QuestItem);
             Console.WriteLine();
         }
-        public void InfoMore()
+        public override void InfoMore()
         {
-            // Show more info
-            Console.WriteLine(ID);
-            Console.WriteLine(Name);
-            Console.WriteLine("$" + Price);
+            // Use base infomore
+            base.InfoMore();
+
+            // Show treasure info
             Console.WriteLine("Quest Item: " + QuestItem);
-            Console.WriteLine(Description);
             Console.WriteLine();
         }
         #endregion
         #region Use Methods
-        public void Use(Player user)
+        public override void Use(Player user)
         {
             // Use code
         }

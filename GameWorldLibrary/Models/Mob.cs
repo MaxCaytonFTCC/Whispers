@@ -17,7 +17,7 @@ namespace GameWorldLibrary
         public int AC { get; set; }
         public string Weapon { get; set; }
         public string Description { get; set; }
-        public List<Treasure> TreasureInventory { get; set; }
+        public List<Usable> Inventory { get; set; } = new List<Usable>();
         #endregion
         #region Constructors
         // Default Constructor
@@ -33,7 +33,7 @@ namespace GameWorldLibrary
             AC = ac;
             Weapon = weapon;
             Description = description;
-            TreasureInventory = treasureInventory;
+            Inventory.Concat(treasureInventory);
         }
         // Clone Constructor
         public Mob(Mob basis)
@@ -46,7 +46,7 @@ namespace GameWorldLibrary
             AC = basis.AC;
             Weapon = basis.Weapon;
             Description = basis.Description;
-            TreasureInventory = basis.TreasureInventory;
+            Inventory = basis.Inventory;
         }
         #endregion
         #region Methods
