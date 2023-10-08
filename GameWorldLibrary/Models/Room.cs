@@ -13,7 +13,7 @@ namespace GameWorldLibrary
         public string Name { get; set; }
         public string Description { get; set; }
         public int[] Exits { get; set; }
-        public List<Usable> RoomUsables { get; set; } = new List<Usable>();
+        public List<Item> RoomItems { get; set; } = new List<Item>();
         public List<Mob> RoomMobs { get; set; }
         public List<Player> RoomPlayers { get; set; }
         #endregion
@@ -28,9 +28,9 @@ namespace GameWorldLibrary
             Name = name;
             Description = description;
             Exits = exits;
-            
+
             // Add room usables to list
-            RoomUsables.Concat(roomItems).Concat(roomWeapons).Concat(roomTreasures).Concat(roomPotions);
+            RoomItems.Concat(roomItems).Concat(roomWeapons).Concat(roomTreasures).Concat(roomPotions);
 
             // Join lists together after inheritance
             RoomMobs = roomMobs;
@@ -48,7 +48,7 @@ namespace GameWorldLibrary
         public void InfoItems()         // Show Item Names and Descriptions
         {
             // Get Items list
-            List<Usable> items = GetList.Usable(RoomUsables, UsableType.Item);
+            List<Item> items = GetList.Item(RoomItems, UsableType.Item);
 
             // If there are no Items in the Room
             if (items.Count == 0)
@@ -71,7 +71,7 @@ namespace GameWorldLibrary
         public void InfoWeapons()       // Show Weapon Names and Descriptions
         {
             // Get Weapons list
-            List<Usable> weapons = GetList.Usable(RoomUsables, UsableType.Item);
+            List<Item> weapons = GetList.Item(RoomItems, UsableType.Item);
 
             // If there are no Weapons in the Room
             if (weapons.Count == 0)
@@ -83,7 +83,7 @@ namespace GameWorldLibrary
             else
             {
                 // For every Weapon in list
-                foreach (Weapon weapon in weapons)
+                foreach (Item weapon in weapons)
                 {
                     // Display Weapon Info
                     weapon.Info();
@@ -93,7 +93,7 @@ namespace GameWorldLibrary
         public void InfoTreasures()     // Show Treasure Names and Descriptions
         {
             // Get Treasures list
-            List<Usable> treasures = GetList.Usable(RoomUsables, UsableType.Item);
+            List<Item> treasures = GetList.Item(RoomItems, UsableType.Item);
 
             // If there are no Treasures in the Room
             if (treasures.Count == 0)
@@ -105,7 +105,7 @@ namespace GameWorldLibrary
             else
             {
                 // For every Treasure in list
-                foreach (Treasure treasure in treasures)
+                foreach (Item treasure in treasures)
                 {
                     // Display Treasure Info
                     treasure.Info();
@@ -115,7 +115,7 @@ namespace GameWorldLibrary
         public void InfoPotions()       // Show Potion Names and Descriptions
         {
             // Get Potions list
-            List<Usable> potions = GetList.Usable(RoomUsables, UsableType.Item);
+            List<Item> potions = GetList.Item(RoomItems, UsableType.Item);
 
             // If there are no Potions in the Room
             if (potions.Count == 0)
@@ -127,7 +127,7 @@ namespace GameWorldLibrary
             else
             {
                 // For every Potion in list
-                foreach (Potion potion in potions)
+                foreach (Item potion in potions)
                 {
                     // Display Potion Info
                     potion.Info();

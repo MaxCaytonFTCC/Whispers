@@ -34,7 +34,7 @@ namespace GameWorldLibrary
 
                     if (index != 0)
                     {                        
-                        World.weapons.Add(new Weapon(int.Parse(tokens[0]),tokens[1],tokens[2],tokens[3],int.Parse(tokens[4]), bool.Parse(tokens[5]), bool.Parse(tokens[6]), int.Parse(tokens[7])));
+                        World.weapons.Add(new Weapon(int.Parse(tokens[0]),tokens[1],tokens[2],tokens[3],int.Parse(tokens[4]), bool.Parse(tokens[5]), bool.Parse(tokens[6]), int.Parse(tokens[7]),UsableType.Weapon));
                     }
 
                     else
@@ -58,7 +58,7 @@ namespace GameWorldLibrary
 
                     if (index != 0)
                     {
-                        World.items.Add(new Item(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), bool.Parse(tokens[3]), bool.Parse(tokens[4]), tokens[5]));
+                        World.items.Add(new Item(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), bool.Parse(tokens[3]), bool.Parse(tokens[4]), tokens[5], UsableType.Potion));
                     }
 
                     else
@@ -82,7 +82,7 @@ namespace GameWorldLibrary
 
                     if (index != 0)
                     {
-                        World.treasures.Add(new Treasure(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), bool.Parse(tokens[3]), bool.Parse(tokens[4]), tokens[5]));
+                        World.treasures.Add(new Treasure(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), bool.Parse(tokens[3]), bool.Parse(tokens[4]), tokens[5], UsableType.Potion));
                     }
 
                     else
@@ -106,7 +106,7 @@ namespace GameWorldLibrary
 
                     if (index != 0)
                     {
-                        World.potions.Add(new Potion(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), bool.Parse(tokens[3]), bool.Parse(tokens[4]), int.Parse(tokens[5]), tokens[6]));
+                        World.potions.Add(new Potion(int.Parse(tokens[0]), tokens[1], int.Parse(tokens[2]), bool.Parse(tokens[3]), bool.Parse(tokens[4]), int.Parse(tokens[5]), tokens[6],UsableType.Potion));
                     }
 
                     else
@@ -130,7 +130,7 @@ namespace GameWorldLibrary
                     if (index != 0)
                     {
                         // TODO Build Lists with new IDs
-                        World.mobs.Add(new Mob(int.Parse(tokens[0]),tokens[1],tokens[2],tokens[3],int.Parse(tokens[4]),int.Parse(tokens[5]),tokens[6],tokens[7], new List<Item>(), new List<Potion>(), new List<Weapon>(),  new List<Treasure>(), new EquipmentSlots()));
+                        World.mobs.Add(new Mob(int.Parse(tokens[0]),tokens[1],tokens[2],tokens[3],int.Parse(tokens[4]),int.Parse(tokens[5]),tokens[6],tokens[7], new List<Item>(), new EquipmentSlots()));
                     }
 
                     else
@@ -166,10 +166,10 @@ namespace GameWorldLibrary
                         room.Exits = GetList.SubArray(tokens[3]);
 
                         // Add to usables list
-                        room.RoomUsables.Concat(GetList.ItemsfromString(tokens[4]));
-                        room.RoomUsables.Concat(GetList.PotionsfromString(tokens[5]));
-                        room.RoomUsables.Concat(GetList.TreasuresfromString(tokens[6]));
-                        room.RoomUsables.Concat(GetList.WeaponsfromString(tokens[7]));
+                        room.RoomItems.Concat(GetList.ItemsfromString(tokens[4]));
+                        room.RoomItems.Concat(GetList.PotionsfromString(tokens[5]));
+                        room.RoomItems.Concat(GetList.TreasuresfromString(tokens[6]));
+                        room.RoomItems.Concat(GetList.WeaponsfromString(tokens[7]));
 
                         room.RoomMobs = GetList.MobsfromString(tokens[8]);
                         room.RoomPlayers = new List<Player>();

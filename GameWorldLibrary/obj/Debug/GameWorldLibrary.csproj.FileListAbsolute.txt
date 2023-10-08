@@ -22,3 +22,9 @@ C:\Users\super\OneDrive\Desktop\Whispers cm_branch\GameWorldLibrary\obj\Debug\Ga
 C:\Users\super\OneDrive\Desktop\Whispers cm_branch\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CoreCompileInputs.cache
 C:\Users\super\OneDrive\Desktop\Whispers cm_branch\GameWorldLibrary\obj\Debug\GameWorldLibrary.dll
 C:\Users\super\OneDrive\Desktop\Whispers cm_branch\GameWorldLibrary\obj\Debug\GameWorldLibrary.pdb
+C:\Users\super\OneDrive\Desktop\whispersmerge\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.AssemblyReference.cache
+C:\Users\super\OneDrive\Desktop\whispersmerge\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CoreCompileInputs.cache
+C:\Users\super\OneDrive\Desktop\whispersmerge\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.dll
+C:\Users\super\OneDrive\Desktop\whispersmerge\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.pdb
+C:\Users\super\OneDrive\Desktop\whispersmerge\Whispers\GameWorldLibrary\bin\Debug\GameWorldLibrary.dll
+C:\Users\super\OneDrive\Desktop\whispersmerge\Whispers\GameWorldLibrary\bin\Debug\GameWorldLibrary.pdb

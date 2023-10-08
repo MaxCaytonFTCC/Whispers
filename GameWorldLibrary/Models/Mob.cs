@@ -17,7 +17,7 @@ namespace GameWorldLibrary
         // Default Constructor
         public Mob() { }
         // Constructor
-        public Mob(int id, string name, string race, string combatClass, int hp, int ac, string weapon, string description, List<Item> itemInventory, List<Potion> potionInventory, List<Weapon> weaponInventory, List<Treasure> treasureInventory, EquipmentSlots equipmentSlots) : base(id, name, race, combatClass, hp, ac, itemInventory, potionInventory, weaponInventory, treasureInventory, equipmentSlots)
+        public Mob(int id, string name, string race, string combatClass, int hp, int ac, string weapon, string description, List<Item> inventory, EquipmentSlots equipmentSlots) : base(id, name, race, combatClass, hp, ac, inventory, equipmentSlots)
         {
             Weapon = weapon;
             Description = description;
