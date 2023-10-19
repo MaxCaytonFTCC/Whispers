@@ -19,6 +19,8 @@ namespace GameWorldLibrary
 
             LoadMobs();
             LoadRooms();
+
+            LoadActions();
         }
 
         public static void LoadWeapons()
@@ -185,6 +187,20 @@ namespace GameWorldLibrary
                 }
             }
 
+        }
+        public static void LoadActions()
+        {
+            // Add Actions
+            Game.actions.Add(new Help());
+            Game.actions.Add(new Quit());
+
+            // Add Option Actions
+            Game.actions.Add(new Look());
+            Game.actions.Add(new Move());
+
+            // Sort action list by ID
+            // USE DELEGATE WHEN LEARNED
+            //Game.actions.Sort();
         }
 
         public static void InitializeStartingRoom(Player player)

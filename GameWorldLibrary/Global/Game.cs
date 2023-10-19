@@ -12,5 +12,6 @@ namespace GameWorldLibrary
         public static bool running = true;
 
         // Action list
+        public static List<Action> actions = new List<Action>();
     }
 }
