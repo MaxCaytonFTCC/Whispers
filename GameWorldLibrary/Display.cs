@@ -151,7 +151,7 @@ namespace GameWorldLibrary
         public static void DisplayWeaponInstructions()
         {
             // Get weapons list
-            List<Usable> weapons = GetList.Usable(World.player.Inventory, UsableType.Weapon);
+            List<Item> weapons = GetList.Item(World.player.Inventory, UsableType.Weapon);
 
             if (weapons.Count < 1)
             {

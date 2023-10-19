@@ -8,13 +8,13 @@ namespace GameWorldLibrary
 {
     public static class GetList
     {
-        public static List<Usable> Usable (List<Usable> usableList, UsableType type)
+        public static List<Item> Item (List<Item> itemList, UsableType type)
         {
             // Create empty list of usables
-            List<Usable> results = new List<Usable>();
+            List<Item> results = new List<Item>();
 
             // Loop through every usable
-            foreach (Usable usable in usableList)
+            foreach (Item usable in itemList)
             {
                 // If usable's type is being looked for
                 if (usable.Type == type)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Weapon : Usable
+    public class Weapon : Item
     {
         #region Properties
         public string DamageType { get; set; }
@@ -14,50 +14,36 @@ namespace GameWorldLibrary
         #endregion
         #region Constructors
         // Default Constructor
-        public Weapon() :
-            base()
+        public Weapon() 
         {
-            DamageType = "";
-            Damage = 0;
+            Damage = 1;
+            DamageType = "Slashing";
             Type = UsableType.Weapon;
         }
         // Constructor
-        public Weapon(int id, string name, string description, string damageType, int price, int damage) :
-            base(id, name, price, description)
+        public Weapon(int id, string name, string description, string damageType, int price, bool questItem, bool required, int damage, UsableType usableType) : base(id, name, price, questItem, required, description, usableType)
         {
             Damage = damage;
             DamageType = damageType;
-            Type = UsableType.Weapon;
         }
         // Clone Constructor
-        public Weapon(Weapon basis) :
-            base(basis)
+        public Weapon(Weapon basis) : base(basis.ID, basis.Name, basis.Price, basis.QuestItem, basis.Required, basis.Description, basis.Type)
         {
             Damage = basis.Damage;
             DamageType = basis.DamageType;
-            Type = UsableType.Weapon;
         }
         #endregion
         #region Methods
         #region Info Methods
-        public override void Info()
-        {
-            // Use base info method
-            base.Info();
-
-            // Show item info
-            Console.WriteLine(DamageType);
-            Console.WriteLine(Damage);
-            Console.WriteLine();
-        }
         public override void InfoMore()
         {
-           // Use base info method
-            base.Info();
-
-            // Show item info
+            // Show more info
+            Console.WriteLine(ID);
+            Console.WriteLine(Name);
+            Console.WriteLine(Description);
             Console.WriteLine(DamageType);
             Console.WriteLine(Damage);
+            Console.WriteLine("$" + Price);
             Console.WriteLine();
         }
         #endregion

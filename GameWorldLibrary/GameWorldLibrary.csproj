@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\OptionAction.cs" />
+    <Compile Include="Actions\Action.cs" />
+    <Compile Include="Display.cs" />
+    <Compile Include="GetList.cs" />
+    <Compile Include="Interfaces\IOptionAction.cs" />
     <Compile Include="Interfaces\ISingleAction.cs" />
     <Compile Include="Actions\Attack.cs" />
     <Compile Include="Actions\Drop.cs" />
@@ -50,24 +55,23 @@
     <Compile Include="Actions\Quit.cs" />
     <Compile Include="Actions\Use.cs" />
     <Compile Include="Combat.cs" />
-    <Compile Include="Display.cs" />
-    <Compile Include="GetList.cs" />
     <Compile Include="Global\Game.cs" />
     <Compile Include="Interfaces\IUsable.cs" />
-    <Compile Include="MobClass2.cs" />
-    <Compile Include="Models\Damage.cs" />
-    <Compile Include="Models\Item.cs" />
+    <Compile Include="LoadActions.cs" />
     <Compile Include="LoadGame.cs" />
+    <Compile Include="MobClass2.cs" />
+    <Compile Include="Actions\Move.cs" />
+    <Compile Include="Models\Damage.cs" />
+    <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Mob.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Potion.cs" />
-    <Compile Include="Actions\Move.cs" />
-    <Compile Include="Models\Usable.cs" />
-    <Compile Include="PlayerMaker.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\Treasure.cs" />
     <Compile Include="Models\Weapon.cs" />
+    <Compile Include="PlayerMaker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Global\World.cs" />
     <Compile Include="TextScrambler.cs" />
     <Compile Include="UI\Command.cs" />

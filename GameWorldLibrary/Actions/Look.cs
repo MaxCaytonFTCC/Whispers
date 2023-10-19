@@ -6,36 +6,18 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    class Look
+    public class Look : OptionAction
     {
         #region Properties
-        public static string Name { get; } = "Look";                                                 // Action Name
-        public static string[] Keywords { get; } = { "show", "look", "inspect" };                                       // Action Keywords
-        public static string[] Options { get; } = { "Items", "Potions", "Treasures", "Weapons", "Mobs" };    // Action Choices
+        new public string Name { get; } = "Look";
+        new public string[] Keywords { get; } = { "show", "look", "inspect" };
+        new public string[] Options { get; } = { "Items", "Potions", "Treasures", "Weapons", "Mobs" };
         #endregion
         #region Methods
-        public static void Do(Player user, string[] input)
-        {
-            // Check how many tokens a user has inputted
-            switch (input.Length)
-            {
-                // User entered 3 words
-                case 3:
-                    // No command for 3 words
-
-                // User entered 2 words
-                case 2:
-                    Activate(user, input[1]);
-                    break;
-
-                // User entered 1 word
-                default:
-                    Activate(user);
-                    break;
-            }
-        }
+        public Look() : base() { }
+        #endregion
         #region Command Methods
-        public static void Activate(Player user)
+        public override void Activate(Player user)
         {
             // Use command
             Console.WriteLine($"[{Name.ToUpper()}]");
@@ -48,7 +30,7 @@ namespace GameWorldLibrary
         }
         #endregion
         #region Command + Option Methods
-        public static void Activate(Player user, string option)
+        public override void Activate(Player user, string option)
         {
             // Switch
             switch (option)
@@ -98,7 +80,6 @@ namespace GameWorldLibrary
             Console.WriteLine("[CONTINUE]");
             Console.ReadLine();
         }
-        #endregion
         #endregion
     }
 }
