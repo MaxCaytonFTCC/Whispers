@@ -10,7 +10,7 @@ namespace GameWorldLibrary
     {
         public static void DisplayWelcomeInstructions()
         {
-            Console.WriteLine("Welcome to World Of Villainy!\n");
+            Console.WriteLine("Welcome to Whispers!\n");
             Console.WriteLine("Create a character to begin\n");
         }
 
