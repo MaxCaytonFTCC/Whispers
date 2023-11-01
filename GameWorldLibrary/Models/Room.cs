@@ -11,11 +11,12 @@ namespace GameWorldLibrary
         #region Properties
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
+        public string Description { get; set; }        
+        public string ExitString { get; set; }
         public int[] Exits { get; set; }
         public List<Item> RoomItems { get; set; } = new List<Item>();
-        public List<Mob> RoomMobs { get; set; }
-        public List<Player> RoomPlayers { get; set; }
+        public List<Mob> RoomMobs { get; set; } = new List<Mob>();
+        public List<Player> RoomPlayers { get; set; } = new List<Player>();
         #endregion
         #region Constructors
         // Default Constructor

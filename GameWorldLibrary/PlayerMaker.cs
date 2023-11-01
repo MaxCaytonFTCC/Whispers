@@ -32,12 +32,13 @@ namespace GameWorldLibrary
             Display.DisplayPasswordInstructions();
             password = GetCharacterPassword(Console.ReadLine());
             Console.WriteLine("");
-
+            
             // Create Player Object
             newPlayer = new Player(0, name, password, race, combatClass, 100, 0, 0, new List<Item>(), new EquipmentSlots(), new List<string>());
 
-            // Create & Save Player File
-            CreatePlayerFile(newPlayer);
+            // Create & Save Player  To The Database
+            //CreatePlayerFile(newPlayer);
+            SQLiteDataAccess.SavePlayer(newPlayer);
 
             return newPlayer;
         }
@@ -103,6 +104,7 @@ namespace GameWorldLibrary
 
         }
 
+        /*
         private static void CreatePlayerFile(Player player)
         {
 
@@ -119,6 +121,7 @@ namespace GameWorldLibrary
                 Display.DisplayGeneralError();
             }
         }
+        */
 
         #endregion
     }
