@@ -8,6 +8,7 @@ namespace GameWorldLibrary
 {
     public static class Display
     {
+        delegate void DisplayText(string msg); // TODO Possibly implement this in all display methods
         public static void DisplayWelcomeInstructions()
         {
             Console.WriteLine("Welcome to Whispers!\n");
@@ -179,6 +180,33 @@ namespace GameWorldLibrary
         {
             Console.WriteLine("----HELP----");
             Console.WriteLine("Commands:\nhelp - Displays this list of commands\nmove [exit number] - Moves to a room\nget [item type] [item number] - Picks up an item\ndrop [item type] [item number] - Drops an item\ninventory [item type] - Displays an inventory\n[item type/mob] - Displays all of that item or all mobs in your current room\nfight [mob number] - Fights a mob\nquit - Quits the game\n ");
+        }
+
+        public static void DisplayGameWeapons()
+        {
+
+            // Displays every weapon in the GAME, not room, for the player to reference.
+
+            DisplayText DisplayWeaponText = delegate (string text) 
+            {            
+                Console.WriteLine($"{text}");
+            };
+
+            List<Weapon> weaponList = SQLiteDataAccess.LoadWeapons();
+
+            // Use LINQ to sort weapon names in ascending order
+            List<Weapon> sortedWeaponList = (from weapon in weaponList
+                                            orderby weapon.Name
+                                            select weapon).ToList();
+            
+
+            string weaponMsg = "";
+
+            // Use Lambda expression to combine all weapon names
+            sortedWeaponList.ForEach(weapon => { weaponMsg += weapon.Name + "\n"; });
+
+            DisplayWeaponText($"--WHISPERS WEAPON LIST--\n{weaponMsg}");
+
         }
 
     }
