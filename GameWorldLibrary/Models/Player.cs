@@ -13,7 +13,6 @@ namespace GameWorldLibrary
         public string Password { get; set; }                    // Password
         public int Location { get; set; }
         public List<string> Quests { get; set; }                // Quests
-
         #endregion
         #region Constructors
         // Default Constructor
@@ -23,7 +22,7 @@ namespace GameWorldLibrary
         {
             Location = location;
             Password = password;
-            Quests = quests;            
+            Quests = quests;
         }
         #endregion
     }

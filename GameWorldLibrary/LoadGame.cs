@@ -11,17 +11,18 @@ namespace GameWorldLibrary
     {
 
         public static void RunLoad()
-        {            
-            World.items = SQLiteDataAccess.LoadItems();
-            World.treasures = SQLiteDataAccess.LoadTreasures();
-            World.potions = SQLiteDataAccess.LoadPotions();
-            World.weapons = SQLiteDataAccess.LoadWeapons();
-            World.mobs = SQLiteDataAccess.LoadMobs();
-            World.rooms = SQLiteDataAccess.LoadRooms();
+        {
+            LoadWeapons();            
+            LoadTreasures();
+            LoadItems();
+            LoadPotions();
+
+            LoadMobs();
+            LoadRooms();
+
+            LoadActions();
         }
 
-        #region Old Loading Methods
-        /*
         public static void LoadWeapons()
         {
 
@@ -187,8 +188,19 @@ namespace GameWorldLibrary
             }
 
         }
-        */
-        #endregion
+        public static void LoadActions()
+        {
+            // Add Actions
+            Game.actions.Add(new Help());
+            Game.actions.Add(new Quit());
+
+            // Add Option Actions
+            Game.actions.Add(new Look());
+            Game.actions.Add(new Move());
+
+            // Sort action list by ID
+            Game.actions.OrderBy(x => x.ID);
+        }
 
         public static void InitializeStartingRoom(Player player)
         {

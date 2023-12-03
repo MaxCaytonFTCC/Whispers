@@ -27,60 +27,51 @@ namespace GameWorldLibrary
             // Clear console
             Console.Clear();
 
-            // If the Help action is called
-            if (Help.Keywords.Contains(input[0]))
+            // Initialize command strings
+            Action chosen_action = null;
+            string option = "";
+
+            // Select the command using a keyword
+            foreach (Action action in Game.actions)
             {
-                // Display Help
-                Help.Do(World.player, input);
+                // If the chosen word is in the action's keywords
+                if (action.Keywords.Contains(input[0]))
+                {
+                    chosen_action = action;
+                }
             }
 
-            // If the Quit action is called
-            if (Quit.Keywords.Contains(input[0]))
+            // Select the command option
+            if (input.Length > 1)
             {
-                // Quit the game
-                Quit.Do(World.player, input);
+                option = input[1];
             }
 
-            // If the Look action is called
-            if (Look.Keywords.Contains(input[0]))
+            // If an action was chosen
+            if (chosen_action != null)
             {
-                // Look at the Objects in the Room
-                Look.Do(World.player, input);
-            }
+                // If chosen action is an option action
+                if (chosen_action.Type == ActionType.Option)
+                {
+                    // Change action type
+                    OptionAction action = (OptionAction)chosen_action;
 
-            // If the Move action is called
-            if (Move.Keywords.Contains(input[0]))
-            {
-                // Move the player
-                Move.Do(World.player, input);
-            }
-
-            // If the Pick Up action is called
-            if (PickUp.Keywords.Contains(input[0]))
-            {
-                // Pick Up and object
-                //PickUp.Do(World.player, input);
-            }
-
-            // If the Drop action is called
-            if (Drop.Keywords.Contains(input[0]))
-            {
-                // Drop an object
-                //Drop.Do(World.player, input);
-            }
-
-            // If the Use action is called
-            if (Use.Keywords.Contains(input[0]))
-            {
-                // Use inventory
-                Use.Do(World.player, input);
-            }
-
-            // If the Attack action is called
-            if (Attack.Keywords.Contains(input[0]))
-            {
-                // Attack a mob
-                //Attack.Do(World.player, input);
+                    // If option is empty
+                    if (option == "")
+                    {
+                        action.Activate(World.player);
+                    }
+                    // If option is not empty
+                    else
+                    {
+                        action.Activate(World.player, option);
+                    }
+                }
+                // Chosen action is a basic action
+                else
+                {
+                    chosen_action.Activate(World.player);
+                }
             }
         }
     }
