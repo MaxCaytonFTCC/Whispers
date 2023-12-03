@@ -103,3 +103,18 @@ C:\Users\super\OneDrive\Desktop\Sprint 5\ConsoleUI\obj\Debug\ConsoleUI.csproj.Co
 C:\Users\super\OneDrive\Desktop\Sprint 5\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
 C:\Users\super\OneDrive\Desktop\Sprint 5\ConsoleUI\obj\Debug\ConsoleUI.exe
 C:\Users\super\OneDrive\Desktop\Sprint 5\ConsoleUI\obj\Debug\ConsoleUI.pdb
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\bin\Debug\WhispersDB.db
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\bin\Debug\ConsoleUI.exe
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\bin\Debug\ConsoleUI.pdb
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\bin\Debug\Dapper.dll
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\bin\Debug\GameWorldLibrary.dll
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\bin\Debug\System.Data.SQLite.dll
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\bin\Debug\GameWorldLibrary.pdb
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\bin\Debug\Dapper.xml
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\bin\Debug\System.Data.SQLite.xml
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\obj\Debug\ConsoleUI.csproj.AssemblyReference.cache
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\obj\Debug\ConsoleUI.csproj.CoreCompileInputs.cache
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\obj\Debug\ConsoleUI.exe
+C:\Users\super\OneDrive\Desktop\ughwhy\ConsoleUI\obj\Debug\ConsoleUI.pdb
