@@ -39,7 +39,7 @@ namespace GameWorldLibrary
                 case "item":
                 case "items":
                     // Get Items in Room
-                    World.rooms[World.player.Location].InfoItems();
+                    World.rooms[World.player.Location].InfoItems(UsableType.Item);
                     // Break
                     break;
 
@@ -47,7 +47,7 @@ namespace GameWorldLibrary
                 case "potion":
                 case "potions":
                     // Get Potions in Room
-                    World.rooms[World.player.Location].InfoPotions();
+                    World.rooms[World.player.Location].InfoItems(UsableType.Potion);
                     // Break
                     break;
 
@@ -55,7 +55,7 @@ namespace GameWorldLibrary
                 case "treasure":
                 case "treasures":
                     // Get Treasures in Room
-                    World.rooms[World.player.Location].InfoTreasures();
+                    World.rooms[World.player.Location].InfoItems(UsableType.Treasure);
                     // Break
                     break;
 
@@ -63,7 +63,7 @@ namespace GameWorldLibrary
                 case "weapon":
                 case "weapons":
                     // Get Weapons in Room
-                    World.rooms[World.player.Location].InfoWeapons();
+                    World.rooms[World.player.Location].InfoItems(UsableType.Weapon);
                     // Break
                     break;
 

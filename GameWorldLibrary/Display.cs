@@ -57,7 +57,7 @@ namespace GameWorldLibrary
             {
                 case "items":
                     // Display Items
-                    World.rooms[location].InfoItems();
+                    World.rooms[location].InfoItems(UsableType.Item);
 
                     // Break
                     break;
@@ -71,21 +71,21 @@ namespace GameWorldLibrary
 
                 case "weapons":
                     // Display Weapons
-                    World.rooms[location].InfoWeapons();
+                    World.rooms[location].InfoItems(UsableType.Weapon);
 
                     // Break
                     break;
                 
                 case "treasures":
                     // Display Treasures
-                    World.rooms[location].InfoTreasures();
+                    World.rooms[location].InfoItems(UsableType.Treasure);
 
                     // Break
                     break;
 
                 case "potions":
                     // Display Potions
-                    World.rooms[location].InfoPotions();
+                    World.rooms[location].InfoItems(UsableType.Potion);
 
                     // Break
                     break;

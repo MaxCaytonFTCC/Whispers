@@ -73,6 +73,7 @@ namespace GameWorldLibrary
                 // Invalid direction
                 default:
                     // Print no direction string
+                    Display.DisplayMovementError();
                     // Break
                     break;
             }

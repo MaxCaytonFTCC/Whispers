@@ -199,8 +199,7 @@ namespace GameWorldLibrary
             Game.actions.Add(new Move());
 
             // Sort action list by ID
-            // USE DELEGATE WHEN LEARNED
-            //Game.actions.Sort();
+            Game.actions.OrderBy(x => x.ID);
         }
 
         public static void InitializeStartingRoom(Player player)

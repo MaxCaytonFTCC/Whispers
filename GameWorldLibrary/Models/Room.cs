@@ -45,16 +45,18 @@ namespace GameWorldLibrary
             Console.WriteLine(Description);
             Console.WriteLine();
         }
-        public void InfoItems()         // Show Item Names and Descriptions
+        public void InfoItems(UsableType type)      // Show Item Names and Descriptions
         {
             // Get Items list
-            List<Item> items = GetList.Item(RoomItems, UsableType.Item);
+            var items = from item in RoomItems
+                        where item.Type == type
+                        select item;
 
             // If there are no Items in the Room
-            if (items.Count == 0)
+            if (items.Count() == 0)
             {
                 // Print message
-                Console.WriteLine("There are no items here");
+                Console.WriteLine($"There are no {type.ToString().ToLower()}s here");
             }
             // If there are Items in the Room
             else
@@ -68,72 +70,6 @@ namespace GameWorldLibrary
             }
         }
         
-        public void InfoWeapons()       // Show Weapon Names and Descriptions
-        {
-            // Get Weapons list
-            List<Item> weapons = GetList.Item(RoomItems, UsableType.Item);
-
-            // If there are no Weapons in the Room
-            if (weapons.Count == 0)
-            {
-                // Print message
-                Console.WriteLine("There are no weapons here");
-            }
-            // If there are Weapons in the Room
-            else
-            {
-                // For every Weapon in list
-                foreach (Item weapon in weapons)
-                {
-                    // Display Weapon Info
-                    weapon.Info();
-                }
-            }
-        }
-        public void InfoTreasures()     // Show Treasure Names and Descriptions
-        {
-            // Get Treasures list
-            List<Item> treasures = GetList.Item(RoomItems, UsableType.Item);
-
-            // If there are no Treasures in the Room
-            if (treasures.Count == 0)
-            {
-                // Print message
-                Console.WriteLine("There are no treasures here");
-            }
-            // If there are Treasures in the Room
-            else
-            {
-                // For every Treasure in list
-                foreach (Item treasure in treasures)
-                {
-                    // Display Treasure Info
-                    treasure.Info();
-                }
-            }
-        }
-        public void InfoPotions()       // Show Potion Names and Descriptions
-        {
-            // Get Potions list
-            List<Item> potions = GetList.Item(RoomItems, UsableType.Item);
-
-            // If there are no Potions in the Room
-            if (potions.Count == 0)
-            {
-                // Print message
-                Console.WriteLine("There are no potions here");
-            }
-            // If there are Potions in the Room
-            else
-            {
-                // For every Potion in list
-                foreach (Item potion in potions)
-                {
-                    // Display Potion Info
-                    potion.Info();
-                }
-            }
-        }
         public void InfoPlayers()       // Show Player Names and Descriptions
         {
             // If there are no Players in the Room

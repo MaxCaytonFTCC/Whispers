@@ -40,6 +40,7 @@ namespace GameWorldLibrary
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine("[CONTINUE]");
             Console.ReadLine();
         }
         #endregion
