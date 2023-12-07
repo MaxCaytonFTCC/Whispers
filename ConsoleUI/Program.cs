@@ -13,6 +13,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GameWorldLibrary;
+using System.Windows.Forms;
+using WinUI;
 
 namespace ConsoleUI
 {
@@ -20,6 +22,8 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            // Launch Game Main Menu
+            Application.Run(new GameMainMenu());
 
             LoadGame.RunLoad();
 
