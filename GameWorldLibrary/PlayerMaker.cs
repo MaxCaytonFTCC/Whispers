@@ -38,7 +38,7 @@ namespace GameWorldLibrary
 
             // Create & Save Player  To The Database
             //CreatePlayerFile(newPlayer);
-            SQLiteDataAccess.SavePlayer(newPlayer);
+            //SQLiteDataAccess.SavePlayer(newPlayer);
 
             return newPlayer;
         }

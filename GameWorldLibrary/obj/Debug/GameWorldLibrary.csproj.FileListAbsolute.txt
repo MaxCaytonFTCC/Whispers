@@ -72,3 +72,14 @@ C:\Users\super\OneDrive\Desktop\ughwhy\GameWorldLibrary\obj\Debug\GameWorldLibra
 C:\Users\super\OneDrive\Desktop\ughwhy\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CopyComplete
 C:\Users\super\OneDrive\Desktop\ughwhy\GameWorldLibrary\obj\Debug\GameWorldLibrary.dll
 C:\Users\super\OneDrive\Desktop\ughwhy\GameWorldLibrary\obj\Debug\GameWorldLibrary.pdb
+C:\Users\super\OneDrive\Desktop\WhispersGUI\GameWorldLibrary\bin\Debug\GameWorldLibrary.dll
+C:\Users\super\OneDrive\Desktop\WhispersGUI\GameWorldLibrary\bin\Debug\GameWorldLibrary.pdb
+C:\Users\super\OneDrive\Desktop\WhispersGUI\GameWorldLibrary\bin\Debug\Dapper.dll
+C:\Users\super\OneDrive\Desktop\WhispersGUI\GameWorldLibrary\bin\Debug\System.Data.SQLite.dll
+C:\Users\super\OneDrive\Desktop\WhispersGUI\GameWorldLibrary\bin\Debug\Dapper.xml
+C:\Users\super\OneDrive\Desktop\WhispersGUI\GameWorldLibrary\bin\Debug\System.Data.SQLite.xml
+C:\Users\super\OneDrive\Desktop\WhispersGUI\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.AssemblyReference.cache
+C:\Users\super\OneDrive\Desktop\WhispersGUI\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CoreCompileInputs.cache
+C:\Users\super\OneDrive\Desktop\WhispersGUI\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CopyComplete
+C:\Users\super\OneDrive\Desktop\WhispersGUI\GameWorldLibrary\obj\Debug\GameWorldLibrary.dll
+C:\Users\super\OneDrive\Desktop\WhispersGUI\GameWorldLibrary\obj\Debug\GameWorldLibrary.pdb

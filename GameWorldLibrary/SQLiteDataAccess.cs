@@ -40,6 +40,7 @@ namespace GameWorldLibrary
             }
         }
 
+        // TODO Resolve SavePlayer Crashing
         public static void SavePlayer(Player player)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
