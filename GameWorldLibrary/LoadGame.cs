@@ -208,26 +208,18 @@ namespace GameWorldLibrary
         }
 
         // Method for copying Mob Objects From List to List
-        public static void CopyMobToList(ref List<Mob> preivousList, Mob targetMob, ref List<Mob> targetList, bool remove = true)
+        public static void CopyMobToList(ref List<Mob> preivousList, Mob targetMob, ref List<Mob> targetList, bool remove = false)
         {
+            // Find mob to copy using LINQ on the previous list
+            Mob copyMob = (from mob in preivousList
+                           where mob == targetMob
+                           select mob);
+
             // Remove from previous list (if enabled)
-            if (remove == true)
-            {
-                int listIndex = 0;
-                foreach (var mob in preivousList)
-                {
-                    if (mob == targetMob)
-                    {
-                        preivousList.RemoveAt(listIndex);
-                        break;
-                    }
-                    listIndex++;
-                }
-            }
-
+            if (remove == true) preivousList.RemoveAll(x => x == copyMob);
+           
             // Add to target List
-            targetList.Add(targetMob);
-
+            targetList.Add(copyMob);
         }
 
     }
