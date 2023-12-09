@@ -25,5 +25,50 @@ namespace GameWorldLibrary
             Quests = quests;
         }
         #endregion
+
+        #region Methods
+
+        public static Weapon SelectWeapon(Entity player)
+        {
+            // Use LINQ to get all weapons the player has                    
+            var availableWeapons = (from weapon in player.Inventory
+                                    where weapon is Weapon
+                                    select weapon).ToList();
+            
+            Display.DisplayItemList(availableWeapons);
+
+            int selection = -1;
+            while ((selection - 1) < 0 || (selection - 1) > availableWeapons.Count - 1)
+            {
+                try
+                {
+                    Console.Write("\nSelect your weapon: ");
+                    selection = int.Parse(Console.ReadLine());
+                    Console.WriteLine();
+                }
+                catch
+                {
+                    Console.WriteLine("Please select a valid weapon number");
+                    selection = -1;
+                }
+
+            }
+            
+            return (Weapon)availableWeapons[selection-1];
+            
+        }
+
+        public override void EntityDie(int location)
+        {
+            // Get World mobs that excludes the mob who is dead
+            HP = 1;
+            Location = 0;
+            Display.DisplayDeathMessage();
+            
+        }
+
+        #endregion
+
+
     }
 }
