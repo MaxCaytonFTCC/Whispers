@@ -191,12 +191,14 @@ namespace GameWorldLibrary
         public static void LoadActions()
         {
             // Add Actions
-            Game.actions.Add(new Help());
-            Game.actions.Add(new Quit());
+            Game.actions.Add(new Help());   // 0
+            Game.actions.Add(new Quit());   // 1
+            Game.actions.Add(new Stats());  // 2
+            Game.actions.Add(new Inv());    // 3
 
             // Add Option Actions
-            Game.actions.Add(new Look());
-            Game.actions.Add(new Move());
+            Game.actions.Add(new Move());   // 4
+            Game.actions.Add(new Look());   // 5
 
             // Sort action list by ID
             Game.actions.OrderBy(x => x.ID);

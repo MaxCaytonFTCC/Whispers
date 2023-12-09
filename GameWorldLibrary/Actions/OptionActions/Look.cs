@@ -11,7 +11,7 @@ namespace GameWorldLibrary
         #region Methods
         public Look() : base()
         {
-            ID = 3;
+            ID = 5;
             Name = "Look";
             Keywords = new string[] { "show", "look", "inspect" };
             Options = new string[] { "Items", "Potions", "Treasures", "Weapons", "Mobs" };
