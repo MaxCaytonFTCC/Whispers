@@ -19,6 +19,7 @@ namespace GameWorldLibrary
         #region Commands
         public override void Activate(Player user)
         {
+            // show player inventory
             FormHandler.ShowInv(user);
         }
         #endregion

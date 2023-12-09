@@ -195,10 +195,10 @@ namespace GameWorldLibrary
             Game.actions.Add(new Quit());   // 1
             Game.actions.Add(new Stats());  // 2
             Game.actions.Add(new Inv());    // 3
+            Game.actions.Add(new Look());   // 4
 
             // Add Option Actions
-            Game.actions.Add(new Move());   // 4
-            Game.actions.Add(new Look());   // 5
+            Game.actions.Add(new Move());   // 5
 
             // Sort action list by ID
             Game.actions.OrderBy(x => x.ID);

@@ -3,24 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace GameWorldLibrary
 {
-    public class Stats : Action
+    public class Look : Action
     {
         #region Methods
-        public Stats() : base()
+        public Look() : base()
         {
-            ID = 2;
-            Name = "Stats";
-            Keywords = new string[] {"stat", "stats", "self" };
+            ID = 4;
+            Name = "Look";
+            Keywords = new string[] { "show", "look", "inspect" };
         }
 
         #region Commands
         public override void Activate(Player user)
         {
-            // Show player stats
-            FormHandler.ShowStats(user);
+            // Show current room
+            FormHandler.ShowRoom(World.rooms[user.Location]);
         }
         #endregion
         #endregion

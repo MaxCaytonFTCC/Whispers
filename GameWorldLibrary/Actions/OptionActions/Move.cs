@@ -12,7 +12,7 @@ namespace GameWorldLibrary
         #region Methods
         public Move() : base()
         {
-            ID = 4;
+            ID = 5;
             Name = "Move";
             Keywords = new string[] { "move", "walk", "run", "go", "leave", "exit" };
             Options = new string[] { "North", "South", "East", "West" };

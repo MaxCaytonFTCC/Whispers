@@ -1,4 +1,4 @@
-﻿namespace GameWorldLibrary.Forms
+﻿namespace GameWorldLibrary
 {
     partial class InvForm
     {
