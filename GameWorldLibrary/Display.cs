@@ -209,5 +209,15 @@ namespace GameWorldLibrary
 
         }
 
+        public static void DisplayItemList(List<Item> itemList)
+        {
+            // Displays a given list of items and each one's
+            // index in the list. Used for menus.
+            for (int i = 0; i < itemList.Count; i++)
+            {
+                Console.WriteLine($"{i+1}. {itemList[i].Name}");
+            }
+        }
+
     }
 }

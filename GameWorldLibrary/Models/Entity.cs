@@ -56,7 +56,13 @@ namespace GameWorldLibrary.Models
                 Console.WriteLine();
             }
 
-            #endregion
+        #endregion
+
+        #region Combat Methods
+
+        public abstract void EntityDie(int location);        
+
+        #endregion
 
         #endregion
 
