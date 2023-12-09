@@ -17,16 +17,16 @@ namespace GameWorldLibrary
             InitializeComponent();
         }
 
-        public void Init(Entity target)
+        public void SetUp(Entity target)
         {
             // Start up form
-            nameLBL.Text = target.Name;
-
+            nameDisplayLBL.Text = target.Name;
+            
             // Fill stat list
-            statLB.Items.Clear();   // Clear current stats
-            statLB.Items.Add($"Race:\t{target.Race}");
-            statLB.Items.Add($"HP:\t{target.HP}");
-            statLB.Items.Add($"AC:\t{target.AC}");
+            statDisplayLB.Items.Clear();   // Clear current stats
+            statDisplayLB.Items.Add($"Race:\t{target.Race}");
+            statDisplayLB.Items.Add($"HP:\t{target.HP}");
+            statDisplayLB.Items.Add($"AC:\t{target.AC}");
         }
 
         private void closeBTN_Click(object sender, EventArgs e)

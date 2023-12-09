@@ -11,25 +11,18 @@ namespace GameWorldLibrary
 {
     public static class FormHandler
     {
-        public static StatForm _formStat;
-        public static InvForm _formInv;
-        public static void Boot()
-        {
-            // Create all forms
-            _formStat = new StatForm();     // Create Stat Form
-            _formInv = new InvForm();       // Create Inv Form
-        }
-
         public static void ShowStats(Entity target)
         {
-            _formStat.Init(target);
-            Application.Run(_formStat);
+            StatForm form = new StatForm();
+            form.SetUp(target);
+            Application.Run(form);
         }
 
         public static void ShowInv(Entity target)
         {
-            _formInv.Init(target);
-            Application.Run(_formInv);
+            InvForm form = new InvForm();
+            form.SetUp(target);
+            Application.Run(form);
         }
     }
 }

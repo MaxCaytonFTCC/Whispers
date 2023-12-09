@@ -17,16 +17,16 @@ namespace GameWorldLibrary.Forms
             InitializeComponent();
         }
 
-        public void Init(Entity target)
+        public void SetUp(Entity target)
         {
             // Start up form
-            nameLBL.Text = target.Name; // Change name label to target name
+            nameDisplayLBL.Text = target.Name + "'s inventory"; // Change name label to target name
 
             // Fill inventory list
             foreach(Item item in target.Inventory)  // For every item in the inventory
             {
                 // Show item name and type
-                invLB.Items.Add($"{item.Name} [{item.Type.ToString().ToUpper()}]");
+                invDisplayLB.Items.Add($"{item.Name} [{item.Type.ToString().ToUpper()}]");
             }
         }
 
