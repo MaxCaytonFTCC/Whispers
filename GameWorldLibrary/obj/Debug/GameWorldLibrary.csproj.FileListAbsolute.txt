@@ -92,3 +92,18 @@ C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary
 C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.StatForm.resources
 C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.InvForm.resources
 C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.RoomForm.resources
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.AssemblyReference.cache
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\obj\Debug\GameWorldLibrary.InvForm.resources
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\obj\Debug\GameWorldLibrary.RoomForm.resources
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\obj\Debug\GameWorldLibrary.StatForm.resources
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.GenerateResource.cache
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CoreCompileInputs.cache
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\obj\Debug\GameWorldLibrary.dll
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\obj\Debug\GameWorldLibrary.pdb
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\bin\Debug\GameWorldLibrary.dll
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\bin\Debug\GameWorldLibrary.pdb
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\bin\Debug\Dapper.dll
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\bin\Debug\System.Data.SQLite.dll
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\bin\Debug\Dapper.xml
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\bin\Debug\System.Data.SQLite.xml
+C:\Users\super\OneDrive\Desktop\The Final Whisper\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CopyComplete

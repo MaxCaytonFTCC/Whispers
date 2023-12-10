@@ -213,7 +213,7 @@ namespace GameWorldLibrary
         public static void CopyMobToList(ref List<Mob> preivousList, Mob targetMob, ref List<Mob> targetList, bool remove = false)
         {
             // Find mob to copy using LINQ on the previous list
-            Mob copyMob = (from mob in preivousList
+            Mob copyMob = (Mob)(from mob in preivousList
                            where mob == targetMob
                            select mob);
 
