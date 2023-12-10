@@ -90,4 +90,5 @@ C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\bin\Debug\Dapper.xml
 C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\bin\Debug\System.Data.SQLite.xml
 C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.csproj.CopyComplete
 C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.StatForm.resources
-C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.Forms.InvForm.resources
+C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.InvForm.resources
+C:\Users\kmccr\source\repos\Whispers\GameWorldLibrary\obj\Debug\GameWorldLibrary.RoomForm.resources
