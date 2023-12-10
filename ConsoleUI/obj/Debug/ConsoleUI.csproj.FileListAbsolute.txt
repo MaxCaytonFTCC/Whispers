@@ -136,3 +136,11 @@ C:\Users\super\OneDrive\Desktop\WhispersGUI\ConsoleUI\obj\Debug\ConsoleUI.pdb
 C:\Users\super\OneDrive\Desktop\WhispersGUI\ConsoleUI\bin\Debug\WinUI.exe
 C:\Users\super\OneDrive\Desktop\WhispersGUI\ConsoleUI\bin\Debug\WinUI.pdb
 C:\Users\super\OneDrive\Desktop\WhispersGUI\ConsoleUI\bin\Debug\WinUI.exe.config
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\WhispersDB.db
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\Dapper.dll
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\System.Data.SQLite.dll
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\WinUI.exe
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\WinUI.pdb
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\WinUI.exe.config
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\Dapper.xml
+C:\Users\kmccr\source\repos\Whispers\ConsoleUI\bin\Debug\System.Data.SQLite.xml

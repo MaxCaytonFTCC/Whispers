@@ -1,4 +1,4 @@
-﻿using GameWorldLibrary.Models;
+﻿using GameWorldLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;

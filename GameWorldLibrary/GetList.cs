@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GameWorldLibrary
 {
@@ -61,7 +62,8 @@ namespace GameWorldLibrary
 
             for (int i = 0; i < item_tokens.Length; i++)
             {
-                itemList.Add(World.items[item_tokens[i]]);
+                // Add clone of item
+                itemList.Add(new Item(World.items[item_tokens[i]]));
             }
 
             return itemList;
@@ -80,7 +82,8 @@ namespace GameWorldLibrary
 
             for (int i = 0; i < mob_tokens.Length; i++)
             {
-                mobList.Add(World.mobs[mob_tokens[i]]);
+                // Add clone of mob
+                mobList.Add(new Mob(World.mobs[mob_tokens[i]]));
             }
 
             return mobList;
@@ -99,7 +102,8 @@ namespace GameWorldLibrary
 
             for (int i = 0; i < weapon_tokens.Length; i++)
             {
-                weaponList.Add(World.weapons[weapon_tokens[i]]);
+                // Add clone of weapon
+                weaponList.Add(new Weapon(World.weapons[weapon_tokens[i]]));
             }
 
             return weaponList;
@@ -117,7 +121,8 @@ namespace GameWorldLibrary
 
             for (int i = 0; i < treasure_tokens.Length; i++)
             {
-                treasureList.Add(World.treasures[treasure_tokens[i]]);
+                // Add clone of treasure
+                treasureList.Add(new Treasure(World.treasures[treasure_tokens[i]]));
             }
 
             return treasureList;
@@ -136,7 +141,8 @@ namespace GameWorldLibrary
 
             for (int i = 0; i < potion_tokens.Length; i++)
             {
-                potionList.Add(World.potions[potion_tokens[i]]);
+                // Add clone of potion
+                potionList.Add(new Potion(World.potions[potion_tokens[i]]));
             }
 
             return potionList;

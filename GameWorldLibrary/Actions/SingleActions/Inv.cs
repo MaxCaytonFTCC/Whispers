@@ -6,22 +6,23 @@ using System.Threading.Tasks;
 
 namespace GameWorldLibrary
 {
-    public class Quit : Action
+    public class Inv : Action
     {
         #region Methods
-        public Quit(): base()
+        public Inv() : base()
         {
-            ID = 1;
-            Name = "Quit";
-            Keywords = new string[] { "quit" };
+            ID = 3;
+            Name = "Inventory";
+            Keywords = new string[] { "inv", "inventory" };
         }
+
+        #region Commands
         public override void Activate(Player user)
         {
-            // Quit the game
-            Game.running = false;
-
-            // Display Goodbye
+            // show player inventory
+            FormHandler.ShowInv(user);
         }
+        #endregion
         #endregion
     }
 }

@@ -42,6 +42,8 @@
     <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,11 +53,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\Bases\Action.cs" />
-    <Compile Include="Actions\OptionActions\Look.cs" />
     <Compile Include="Actions\OptionActions\Move.cs" />
     <Compile Include="Actions\Bases\OptionAction.cs" />
+    <Compile Include="Actions\SingleActions\Inv.cs" />
+    <Compile Include="Actions\SingleActions\Look.cs" />
+    <Compile Include="Actions\SingleActions\Stats.cs" />
     <Compile Include="Actions\SingleActions\Help.cs" />
     <Compile Include="Actions\SingleActions\Quit.cs" />
+    <Compile Include="Forms\InvForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InvForm.Designer.cs">
+      <DependentUpon>InvForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RoomForm.Designer.cs">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StatForm.Designer.cs">
+      <DependentUpon>StatForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IOptionAction.cs" />
     <Compile Include="Interfaces\ISingleAction.cs" />
     <Compile Include="Combat.cs" />
@@ -81,11 +103,23 @@
     <Compile Include="SQLiteDataAccess.cs" />
     <Compile Include="TextScrambler.cs" />
     <Compile Include="UI\Command.cs" />
+    <Compile Include="UI\FormHandler.cs" />
     <Compile Include="UI\Input.cs" />
     <Compile Include="UI\Menu.cs" />
     <Compile Include="EquipmentSlots.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\InvForm.resx">
+      <DependentUpon>InvForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RoomForm.resx">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatForm.resx">
+      <DependentUpon>StatForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Docs\csv\items.csv" />
     <None Include="Docs\csv\mobs.csv" />

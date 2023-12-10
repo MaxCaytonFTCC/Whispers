@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameWorldLibrary.Models
+namespace GameWorldLibrary
 {
     abstract public class Entity
     {

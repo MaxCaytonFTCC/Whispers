@@ -15,11 +15,13 @@ using System.Threading.Tasks;
 using GameWorldLibrary;
 using System.Windows.Forms;
 using WinUI;
+using System.Threading;
 
 namespace ConsoleUI
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
 
@@ -33,18 +35,16 @@ namespace ConsoleUI
 
             // Create Character
             World.player = PlayerMaker.CreateNewPlayer();
-            //World.player = new Player();
             LoadGame.InitializeStartingRoom(World.player);
-
+            
             Console.ReadKey();
 
             // Game Loop
             do
-            {
+            {                
                 //Get Input
                 Command.GetInput();
                 Console.WriteLine("");                
-
             }
             while (Game.running);
         }
