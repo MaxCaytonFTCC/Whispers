@@ -49,6 +49,22 @@ namespace GameWorldLibrary
             Console.WriteLine();
         }
         #endregion
+
+        #region Combat Methods
+
+        public override void EntityDie(int location)
+        {
+            // Get World mobs that excludes the mob who is dead
+            List<Mob> worldMobs = (from mob in World.rooms[location].RoomMobs
+                                   where mob != (Mob)this
+                                   select mob).ToList();
+
+            Console.WriteLine($"{Name} has been defeated!");
+            World.rooms[location].RoomMobs = worldMobs;
+        }
+
+        #endregion
+
         #endregion
     }
 }
